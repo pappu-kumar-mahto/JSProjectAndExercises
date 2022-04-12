@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <script>
+        function calculation() {
+            var billAmount = Number(prompt('Enter the Amount'))
+            var age = Number(prompt('Enter your age'))
+            if(!billAmount || !age){
+                alert('Enter a Valid BillAmount or Age')
+            }else{
+                if (billAmount > 3500 && age >= 18) {
+                alert('your BillAmount is :' +(billAmount * 0.88))
+            } else if (billAmount > 3500 && age < 18) {
+                alert('your BillAmount is :' +(billAmount * 0.9))
+            } else if (billAmount > 2500) {
+                alert('your BillAmount is :' +(billAmount * 0.9))
+            }
+            else {
+                alert('You got No Discount your amount is:' + billAmount)
+            }
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="calculation()">Calculation</button>
+</body>
+
+</html>
