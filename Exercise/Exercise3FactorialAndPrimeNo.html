@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise4</title>
+
+    <script>
+        function factorial(val) {
+            if (val == 0) {
+                return 1
+            } else {
+                return val * factorial(val - 1)
+            }
+        }
+
+        function checkPrime(val) {
+            let mid = val / 2, status = 0
+            if (val == 0 || val == 1) {
+                status = 1
+            } else {
+                for (let i = 2; i <= mid; i++) {
+                    if (val % i == 0) {
+                        status = 1
+                        break;
+                    }
+                }
+            }
+            if (status == 1) {
+                console.log(val + ' is not a prime number')
+            } else {
+                console.log(val + ' is a Prime Number')
+            }
+
+
+        }
+        let val = Number(prompt('Enter a Number: '))
+        if (!val || val < 0) {
+            alert('Enter a valid number')
+        } else {
+            console.log(factorial(val))
+            console.log(checkPrime(val))
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
