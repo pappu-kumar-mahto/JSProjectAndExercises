@@ -1,15 +1,41 @@
 body{
-    display: flex;
+    /* display: flex; */
     height: 100vh;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.8s ease-in-out;
+    background-image: url("https://images.unsplash.com/photo-1518665750801-883c188a660d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+}
+#heading{
+    height: 50px;
+    width: 100;
+    padding: 10px 0px;
+    line-height: 40px;
+    text-align: center;
+    margin: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 6px;
+    word-spacing: 8px;
+    font-size: 2.5rem;
+    color: rgba(226, 35, 35, 0.849);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: url("https://images.unsplash.com/photo-1601436155198-2ebfea8117b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Ymx1ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    border-radius: 2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container{
     display: flex;
     width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .panel{
@@ -19,24 +45,25 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
     border-radius: 50px;
     color: #fff;
     cursor: pointer;
     margin: 10px;
-    transition: all .96s ease-in;
+    transition: all .8s ease-in;
 }
 
 .panel.active{
     flex: 5;
+    transition: all 0.9s ease;
 }
 
 .panel h3{
     font-size: 25px;
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    right: 50px;
     margin: 0;
+    color: #05eff7;
     opacity: 0;
 }
 
@@ -45,7 +72,7 @@ body{
     transition: opacity .3s ease-in .4s;
 }
 
-#panel-1{
+ #panel-1{
     background-image: url("https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");   
 }
 
@@ -54,13 +81,13 @@ body{
 }
 
 #panel-3{
-    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80");   
+    background-image: url("https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");   
 }
 
 #panel-4{
-    background-image: url("https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");   
+    background-image: url("https://media.istockphoto.com/photos/cryptocurrency-bitcoin-symbol-crypto-binary-virtual-data-blockchain-picture-id1288055255?k=20&m=1288055255&s=612x612&w=0&h=YFPUBAPGXEMWWEqVYAeBQO7plGR9Ix8_2xf3jg7UH7c=");   
 }
 
 #panel-5{
-    background-image: url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");   
-}
+    background-image: url("https://media.istockphoto.com/photos/digital-security-concept-picture-id1300897309");   
+} 
