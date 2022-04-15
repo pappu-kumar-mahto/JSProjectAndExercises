@@ -1,9 +1,16 @@
 var displayArea = document.getElementById('display')
 
+function isOperator(btnTxt){
+    if(btnTxt == '+' || btnTxt == '-' || btnTxt == '*' || btnTxt == '/' || btnTxt == '%')
+      return true
+    else 
+      return false
+  }
+
 function buttonClicked(btnTxt) {
     if (displayArea.innerText === '0') { //to stop displaying 0 in the first place
         if (btnTxt != '0' && btnTxt != '00') { //if display has already 0 don't add further 0
-            if (btnTxt == '.') { // if btn clicked is '.' or and operator then show . or operator along with zero
+            if (btnTxt == '.' || isOperator(btnTxt)) { // if btn clicked is '.' or and operator then show . or operator along with zero
                 displayArea.innerText = '0' + btnTxt
             } else {
                 displayArea.innerText = btnTxt
