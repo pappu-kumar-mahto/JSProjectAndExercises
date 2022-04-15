@@ -8,18 +8,20 @@
 </head>
 <body>
     <script>
-        let x = 'JavaScript + HTML + CSS + Bootstrap', count = 0
-        for(let i =0; i<x.length; i++){
-            if(x[i]=='+'){
-                count += 1
-                if(count==2){
-                    console.log(i)
-                    break;
-                }else{
-                    continue;
-                }
-            }
-        }
+        // let x = 'JavaScript + HTML + CSS + Bootstrap', count = 0
+        // for(let i =0; i<x.length; i++){
+        //     if(x[i]=='+'){
+        //         count += 1
+        //         if(count==2){
+        //             console.log(i)
+        //             break;
+        //         }else{
+        //             continue;
+        //         }
+        //     }
+        // }
+        let s = "JavaScript + HTML + CSS + Bootstrap"
+        console.log(s.indexOf('+', s.indexOf('+')+1))
     </script>
 </body>
 </html>
