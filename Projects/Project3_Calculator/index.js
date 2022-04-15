@@ -1,8 +1,14 @@
 var displayArea = document.getElementById('display')
 
 function buttonClicked(btnTxt) {
-    if (displayArea.innerText === '0') {
-        displayArea.innerText = btnTxt
+    if (displayArea.innerText === '0') { //to stop displaying 0 in the first place
+        if (btnTxt != '0' && btnTxt != '00') { //if display has already 0 don't add further 0
+            if (btnTxt == '.') { // if btn clicked is '.' or and operator then show . or operator along with zero
+                displayArea.innerText = '0' + btnTxt
+            } else {
+                displayArea.innerText = btnTxt
+            }
+        }
     } else {
         displayArea.innerText = displayArea.innerText + btnTxt
         /*this line will display the new number along with the previous number 
