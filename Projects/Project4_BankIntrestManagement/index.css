@@ -1,4 +1,13 @@
+body{
+    background-image: url("https://images.unsplash.com/photo-1634038971336-9c105b3116e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1267&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
 .bankBalanceDisplay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -6,12 +15,35 @@
     text-align: center;
 }
 
-.bankBalanceDisplay table{
-    border: 2px solid black;
+.holderName{
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #0992ed;
+}
+
+.heading{
+    font-weight: bolder;
+    color: #ed1e07;
+}
+
+summary{
+    color: black;
+    font-weight: bolder;
+}
+
+.instruction{
+    color: #f21505;
+    font-weight: bold;
+
+}
+
+li:hover{
+    text-decoration: underline;
+    color: #20ed09;
 }
 
 table, tr, th, td{
-    border: 2px solid black;
+    border: 2px solid #baf72a;
     border-collapse: collapse;
 }
 
@@ -20,15 +52,23 @@ td, th{
 }
 
 td input{
+    border: 2px solid #c10cf7;
     width: 75%;
     padding: 10px 20px;
+    color: darkblue;
+    font-weight: bold;
 }
 
-.bankBalanceDisplay button{
+.btn{
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
     background-color: antiquewhite;
     color: blue;
+    border: none;
+}
+.btn:hover{
     cursor: pointer;
+    background-color: #20ed09;
+    color: #d609ed;
 }
