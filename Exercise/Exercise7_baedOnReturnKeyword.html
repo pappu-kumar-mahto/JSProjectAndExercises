@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+</head>
+<body>
+    <script>
+        let str = prompt('Enter one Word String: ')
+        /* Using Normal function with return KeyWord
+        function capitalizeString (str){
+            if(str == Number(str)){
+                alert('Not a valid String')
+            }else{
+                return (str[0].toUpperCase() + str.slice(1))
+            }
+        }
+        */
+    //    Using Anonymous Funtion and Return KeyWord
+        let capitalizeString = function (str){
+            return str[0].toUpperCase() + str.slice(1)
+        }
+        console.log (capitalizeString(str))
+    </script>
+</body>
+</html>
