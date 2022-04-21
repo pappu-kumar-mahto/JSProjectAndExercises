@@ -5,14 +5,12 @@ body{
     background-size: 100% 100%;
 }
 .bankBalanceDisplay{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 }
 
 .holderName{
@@ -23,7 +21,7 @@ body{
 
 .heading{
     font-weight: bolder;
-    color: #ed1e07;
+    color: #07f1f5;
 }
 
 summary{
@@ -42,18 +40,19 @@ li:hover{
     color: #20ed09;
 }
 
-table, tr, th, td{
+#tab, tr, th, td{
     border: 2px solid #baf72a;
     border-collapse: collapse;
+    padding: 10px;
 }
 
-td, th{
-    padding: 10px;
+#tab th{
+    padding: 20px;
 }
 
 td input{
     border: 2px solid #c10cf7;
-    width: 75%;
+    width: 12vw;
     padding: 10px 20px;
     color: darkblue;
     font-weight: bold;
@@ -66,6 +65,7 @@ td input{
     background-color: antiquewhite;
     color: blue;
     border: none;
+    
 }
 .btn:hover{
     cursor: pointer;
