@@ -69,10 +69,10 @@ function calculateIntrest() {
       }
       }
       
-      updateBankBalance1.value = bankBalances[0]
-      updateBankBalance2.value = bankBalances[1]
-      updateBankBalance3.value = bankBalances[2]
-      updateBankBalance4.value = bankBalances[3]
-      updateBankBalance5.value = bankBalances[4]
+      updateBankBalance1.value = bankBalances[0].toFixed(4)
+      updateBankBalance2.value = bankBalances[1].toFixed(4)
+      updateBankBalance3.value = bankBalances[2].toFixed(4)
+      updateBankBalance4.value = bankBalances[3].toFixed(4)
+      updateBankBalance5.value = bankBalances[4].toFixed(4)
   }
   
