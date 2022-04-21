@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>Bank Intrest Project</title>
-    
+
 </head>
+
 <body>
     <div class="bankBalanceDisplay">
 
-        <table>
+        <table id="tab">
             <tr class="heading">
                 <th>Account Holder Name</th>
                 <th>Current Account Balance</th>
                 <th>Updated Account Balance</th>
             </tr>
             <tr>
-                <td class="holderName" >Robin</td>
-                <td><input type="text" id="bankBalance-1"></td>
-                <td><input type="text" id="updatedBankBalance-1" disabled></td>
+                <td class="holderName">Robin</td>
+                <td><input type="text" placeholder="Enter Amount" id="bankBalance-1"></td>
+                <td><input type="text" value="0" id="updatedBankBalance-1" disabled></td>
             </tr>
             <tr>
-                <td class="holderName" >Sawarna</td>
-                <td><input type="text" id="bankBalance-2"></td>
-                <td><input type="text" id="updatedBankBalance-2" disabled></td>
+                <td class="holderName">Sawarna</td>
+                <td><input type="text" placeholder="Enter Amount" id="bankBalance-2"></td>
+                <td><input type="text" value="0" id="updatedBankBalance-2" disabled></td>
             </tr>
             <tr>
-                <td class="holderName" >Aryan</td>
-                <td><input type="text" id="bankBalance-3"></td>
-                <td><input type="text" id="updatedBankBalance-3" disabled></td>
+                <td class="holderName">Aryan</td>
+                <td><input type="text" placeholder="Enter Amount" id="bankBalance-3"></td>
+                <td><input type="text" value="0" id="updatedBankBalance-3" disabled></td>
             </tr>
             <tr>
-                <td class="holderName" >Sonalika</td>
-                <td><input type="text" id="bankBalance-4"></td>
-                <td><input type="text" id="updatedBankBalance-4" disabled></td>
+                <td class="holderName">Sonalika</td>
+                <td><input type="text" placeholder="Enter Amount" id="bankBalance-4"></td>
+                <td><input type="text" value="0" id="updatedBankBalance-4" disabled></td>
             </tr>
             <tr>
-                <td class="holderName" >AbhiRaj</td>
-                <td><input type="text" id="bankBalance-5"></td>
-                <td><input type="text" id="updatedBankBalance-5" disabled></td>
+                <td class="holderName">AbhiRaj</td>
+                <td><input type="text" placeholder="Enter Amount" id="bankBalance-5"></td>
+                <td><input type="text" value="0" id="updatedBankBalance-5" disabled></td>
             </tr>
         </table>
         <button class="btn" onclick="calculateIntrest()">Click Here To Calculate Balance After Intrest</button>
@@ -50,13 +52,17 @@
         <details>
             <summary>Rules to calculate Intrest:- </summary>
             <ol>
-                <li>Intrest Rate for Account Balance more than 2-Lakhs is 10% and maintanance charges apply as 0.2% of balance </li>
-                <li>Intrest Rate for Account Balance more than 1-Lakhs is 5% and maintanance charges apply as 0.05% of balance </li>
-                <li>Intrest Rate for Account Balance less than or Equals to 1-Lakhs is 3% and no maintanance charges apply </li>
+                <li>Intrest Rate for Account Balance more than 2-Lakhs is 10% and maintanance charges apply as 0.2% of
+                    balance </li>
+                <li>Intrest Rate for Account Balance more than 1-Lakhs is 5% and maintanance charges apply as 0.05% of
+                    balance </li>
+                <li>Intrest Rate for Account Balance less than or Equals to 1-Lakhs is 3% and no maintanance charges
+                    apply </li>
             </ol>
         </details>
     </div>
 
     <script src="index.js"></script>
 </body>
+
 </html>
