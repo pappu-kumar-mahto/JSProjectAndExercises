@@ -18,19 +18,25 @@
     <div class="cntainer">
         <div class="registration-form">
             <h1 class="display-3">Registration</h1>
-            <form class="row g-3 needs-validation" novalidate onsubmit="validation()">
+            <form class="row g-3 needs-validation" novalidate autocomplete="off">
                 <div class="col-md-4">
                     <label for="firstName" class="form-label">First name</label>
                     <input type="text" class="form-control" id="firstName" required>
-                    <div class="valid-feedback">
+                    <div class="valid-feedback" id="firstNameValid">
                         Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="firstNameInvalid">
+                        Please provide a valid FirstName.
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label for="lasstName" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="lasstName" required>
-                    <div class="valid-feedback">
+                    <input type="text" class="form-control" id="lastName" required>
+                    <div class="valid-feedback" id="lastNameValid">
                         Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="lastNameInvalid">
+                        Please provide a valid LastName.
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -39,16 +45,22 @@
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
                         <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend"
                             required>
-                        <div class="invalid-feedback">
-                            Please choose a username.
+                        <div class="valid-feedback" id="emailValid">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback" id="emailInvalid">
+                            Please choose an Email.
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label for="phoneNumber" class="form-label">Phone Number</label>
                     <input type="text" class="form-control" id="phoneNumber" required>
-                    <div class="invalid-feedback">
-                        Please provide a valid city.
+                    <div class="valid-feedback" id="phoneNumberValid">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="phoneNumberInvalid">
+                        Please provide a valid Phone Number.
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -57,15 +69,21 @@
                         <option selected disabled value="">Choose...</option>
                         <option>...</option>
                     </select>
-                    <div class="invalid-feedback">
+                    <div class="valid-feedback" id="stateValid">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="stateInvalid">
                         Please select a valid state.
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label for="zipCode" class="form-label">Zip</label>
                     <input type="text" class="form-control" id="zipCode" required>
-                    <div class="invalid-feedback">
-                        Please provide a valid zip.
+                    <div class="valid-feedback" id="zipCodeValid">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="zipCodeInvalid">
+                        Please provide a valid zipCode.
                     </div>
                 </div>
                 <div class="col-12">
@@ -80,7 +98,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-secondary" type="submit">Submit form</button>
+                    <button class="btn btn-secondary" type="button" onclick="validation()">Submit form</button>
                 </div>
             </form>
         </div>
