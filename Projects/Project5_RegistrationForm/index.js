@@ -49,11 +49,25 @@ function validation() {
     emailInvalid.style.display = 'none'
   }
 
-  if (phoneNumber === '' || !phoneNumber.match(/^[6-9]\d{9}$/g)) {
-    phoneNumberInvalid.style.display = 'block'
-    phoneNumberValid.style.display = 'none'
+  if (
+    phoneNumber === "" ||
+    phoneNumber.length != 10 ||
+    Number(phoneNumber[0]) < 6
+  ) {
+    // !phoneNumber.match(/^[6-9]\d{9}$/g)
+    phoneNumberInvalid.style.display = "block";
+    phoneNumberValid.style.display = "none";
   } else {
-    phoneNumberValid.style.display = 'block'
-    phoneNumberInvalid.style.display = 'none'
+    phoneNumberValid.style.display = "block";
+    phoneNumberInvalid.style.display = "none";
+  }
+
+
+  if (zipCode === "" || zipCode.length != 6) {
+    zipCodInvalid.style.display = "block";
+    zipCodeValid.style.display = "none";
+  } else {
+    zipCodeValid.style.display = "block";
+    zipCodInvalid.style.display = "none";
   }
 }
