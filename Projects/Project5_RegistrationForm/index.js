@@ -70,4 +70,18 @@ function validation() {
     zipCodeValid.style.display = "block";
     zipCodInvalid.style.display = "none";
   }
+
+  if (state === "") {
+    stateInvalid.style.display = "block";
+    stateValid.style.display = "none";
+  } else {
+    stateValid.style.display = "block";
+    stateInvalid.style.display = "none";
+  }
+
+  if (!tncCheckBox) {
+    tncInvalid.style.display = "block";
+  } else {
+    tncInvalid.style.display = "none";
+  }
 }
