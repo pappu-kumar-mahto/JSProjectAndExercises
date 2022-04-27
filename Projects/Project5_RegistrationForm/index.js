@@ -121,6 +121,6 @@ function validation() {
 
 function setTouched(fieldName) {
   setTouchedFields[fieldName] = true
-  console.log(setTouchedFields)
+  // console.log(setTouchedFields)
   validation()
 }
