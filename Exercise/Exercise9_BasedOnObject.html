@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Exercise 9</title>
+
+  <script>
+    let students =
+      [
+        {
+          name: 'Vaishnavi',
+          batch: 8,
+          marks: {
+            science: 80,
+            social: 70,
+            hindi: 80,
+            maths: 100,
+            english: 90,
+          }
+        }, {
+          name: 'Abhishek',
+          batch: 10,
+          marks: {
+            science: 75,
+            social: 75,
+            hindi: 62,
+            maths: 81,
+            english: 52,
+          }
+        }, {
+          name: 'Pappu',
+          batch: 10,
+          marks: {
+            science: 70,
+            social: 72,
+            hindi: 75,
+            maths: 95,
+            english: 82,
+          }
+        }, {
+          name: 'Ram',
+          batch: 7,
+          marks: {
+            science: 35,
+            social: 24,
+            hindi: 22,
+            maths: 95,
+            english: 67,
+          }
+        }, {
+          name: 'Shyam',
+          batch: 9,
+          marks: {
+            science: 45,
+            social: 87,
+            hindi: 65,
+            maths: 78,
+            english: 99,
+          }
+        }
+      ]
+
+      /* ------------------------------------------------------------ */
+      /* Q - Return array of students with following details:
+            - name
+            - batch
+            - average marks secured
+    
+      /* ------------------------------------------------------------ */
+    // Method 1:
+    // let studentList = []
+    // for(let i = 0; i < students.length; i++){
+    // // Assign each student to local variable 
+    //   let student = students[i]
+
+    // // Create an empty object, which will be pushed to the resultant array later
+    //   let obj = {}
+
+    //   // Attach the properties to return
+    //   obj.name = student.name
+    //   obj.batch = student.batch
+
+    //   // Logic to calculate average
+    //   let avgSum = 0
+    //   let marks = Object.values(students[i].marks) // Will return array of marks from the student.marks objects
+    //   for(let j = 0; j <marks.length; j++){
+    //     avgSum += marks[j]
+    //   }
+
+    //   // Attach 'averageMarks' key with average value
+    //   obj.avgmarks = avgSum/ marks.length
+
+    //    // Push the local object with relevant keys inside resultant array
+    //   studentList.push(obj)
+    // }
+    // console.log(studentList)
+/* ------------------------------------------------------------ */
+
+
+// Method 2 (a):
+    // let studentList = students.map(function(student){
+    //   let sum = 0
+
+    //   for(let singleMark of Object.values(student.marks)){
+    //     sum += singleMark
+    //   }
+    //   return {
+    //     name :student.name,
+    //     batch : student.batch,
+    //     avgMarks : sum/Object.values(student.marks).length
+    //   }
+    // })
+    // console.log(studentList)
+  /* ------------------------------------------------------------ */  
+
+  
+  // Method 2 (b)
+  // let studentList = students.map(function(student){
+  //     let marks = Object.values(student.marks)   
+  //     return {
+  //       name :student.name,
+  //       batch : student.batch,
+  //       avgMarks : marks.reduce(function(total, singleMark){
+  //         return total + singleMark
+  //       },0) / marks.length
+  //     }
+  //   })
+  //   console.log(studentList)
+  /* ------------------------------------------------------------ */  
+   
+  
+  // Method 2 (b2)
+    let studentList = students.map(student => ({
+        name :student.name,
+        batch : student.batch,
+        avgMarks : Object.values(student.marks).reduce((total, singleMark) => total + singleMark ,0) / Object.values(student.marks).length
+    }))
+    console.log(studentList)
+  /* ------------------------------------------------------------ */  
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
