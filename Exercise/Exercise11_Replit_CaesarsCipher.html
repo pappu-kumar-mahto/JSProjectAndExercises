@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesars Cipher</title>
+</head>
+<script>
+    function rot13(encodedStr) {
+        const codeArr = (encodedStr.toUpperCase()).split("");  // String to Array
+        let decodedArr = []; // Your Result goes here
+        for (let i = 0; i < codeArr.length; i++) {
+            let codeVal = codeArr[i].charCodeAt()
+            codeArr[i] = ((codeVal < 65 || codeVal > 90) && i === (codeArr.length-1) ?codeArr[i]:
+                ((codeVal < 65 || codeVal > 90)) ? ' ' :
+                    codeVal >= 78 && codeVal <= 90 ?
+                        String.fromCharCode(codeVal - 13) : String.fromCharCode(codeVal + 13))
+            decodedArr.push(codeArr[i])
+        }
+        return decodedArr.join(""); // Array to String
+    }
+    console.log(rot13("Pappu-ABCD?"))
+
+             // if(codeVal >= 65 && codeVal < 78) {
+            //     codeVal += 13;
+            // }else if(codeVal >=78 && codeVal <= 90){
+            //     codeVal -= 13;
+            // }
+</script>
+
+<body>
+
+</body>
+
+</html>
