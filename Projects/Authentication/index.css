@@ -1,0 +1,51 @@
+#container{
+    text-align: center;
+    padding: 30px;
+}
+
+#signUpPassword, #logInPassword{
+    display: block;
+    margin: auto;
+}
+.passMeterLebel{
+    display: none;
+}
+.btn{
+    text-align: center;
+}
+button{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 10px;
+    color: #fff;
+    background-color: black;
+    border-radius: 8px;
+}
+button:hover{
+    cursor: pointer;
+    transition: width 200ms ease-in-out;
+}
+input {
+    display: block;
+    margin: auto;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    border-radius: 10px;
+  }
+
+div.valid, div.invalid, #passwordStrength{
+    display: none;
+}
+
+.valid{
+    color: green;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.invalid{
+    color: red;
+    font-weight: bold;
+    font-size: 1.3em;
+}

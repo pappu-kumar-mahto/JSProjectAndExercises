@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="password">
+            <div id="signup">
+                <label for="signUpPassword"></label>
+                <input type="password" id="signUpPassword" placeholder="Create your password">
+                <div class="passMeter">
+                    <div class="passMeterBar">
+                        <div class="passMeterBarInner js--passBarInner"></div>
+                    </div>
+                    <p class="passMeterLebel">Password Strength: <span class="js--passText"></span></p>
+                </div>
+            </div>
+
+            <div class="valid" id="rightSignUpPass">
+                Looks Good!
+            </div>
+
+            <div class="invalid" id="wrongSignUpPass">
+                please Enter a valid password!!
+            </div>
+
+            <div class="valid" id="SignUpSaved">
+                Password Saved Successfully.
+            </div>
+
+            <div class="invalid" id="SignUpNotSaved">
+                Password Not Saved!!
+            </div>
+
+            <div class="btn">
+                <button onclick="savePassword()">SignUp</button>
+                <br>
+            </div>
+        </div>
+        <hr>
+        <div id="password2">
+            <div id="logIn">
+                <label for="logInPassword"></label>
+                <input type="password" id="logInPassword" placeholder="Enter your password">
+            </div>
+
+            <div class="valid" id="logInMatch">
+                Password matched, LogIn granted.
+            </div>
+
+            <div class="invalid" id="logInNotMatch">
+                Password Not Matched, LogIn denied!!
+            </div>
+
+            <div class="btn">
+                <button onclick="logIn()">LogIn</button>
+                <span id="message"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
