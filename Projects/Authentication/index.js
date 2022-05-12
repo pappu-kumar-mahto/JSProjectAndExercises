@@ -120,6 +120,11 @@ function passwordStrengthCheck() {
     passLebel.style.display = "none"
     passMeterLebel.style.display = "none"
     passMeterBarInner.style.display = "none"
+    
+    SignUpSaved.style.display = "none";
+
+    logInMatch.style.display = "none";
+    logInNotMatch.style.display = "none";
   } else {
     
     passMeterLebel.style.display = "block"
