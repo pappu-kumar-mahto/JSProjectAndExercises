@@ -6,10 +6,10 @@ let wrongSignUpPass = document.getElementById("wrongSignUpPassword");
 let SignUpSaved = document.getElementById("SignUpSaved");
 let SignUpNotSaved = document.getElementById("SignUpNotSaved");
 
-let passMeterBar = document.getElementById("passMeterBar")
-let passMeterLebel = document.getElementById("passMeterLebel")
-let passLebel = document.getElementById("passLebel")
-let passMeterBarInner = document.getElementById("passMeterBarInner")
+let passMeterBar = document.getElementById("passMeterBar");
+let passMeterLebel = document.getElementById("passMeterLebel");
+let passLebel = document.getElementById("passLebel");
+let passMeterBarInner = document.getElementById("passMeterBarInner");
 
 let logInPass = document.getElementById("logInPassword");
 let logInMatch = document.getElementById("logInMatch");
@@ -108,33 +108,38 @@ const decode = (encodedStr) => {
 };
 
 function passwordStrengthCheck() {
-  passMeterLebel.style.display = "block"
-  if (singnUpPass.value.length > 8) {
-    passLebel.style.display = "block"
-    passLebel.innerText = "Strong"
-    passLebel.style.color = "#26de81"
+  let strongPassword = new RegExp(
+    "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-za-z0-9](?=.{8,}))"
+  );
+  let mediumPassword = new RegExp(
+    "((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-za-z0-9])(?=.{5,})|(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-za-z0-9])(?=.{8,}))"
+  );
 
-    passMeterBarInner.style.display = "block"
-    passMeterBarInner.style.width = "80%"
-    passMeterBarInner.style.background = "#26de81"
+  passMeterLebel.style.display = "block";
+  if (strongPassword.test(singnUpPass.value)) {
+    passLebel.style.display = "block";
+    passLebel.innerText = "Strong";
+    passLebel.style.color = "#26de81";
 
-  } else if (singnUpPass.value.length >= 5) {
-    passLebel.style.display = "block"
-    passLebel.innerText = "Modrate"
-    passLebel.style.color = "#fd9644"
+    passMeterBarInner.style.display = "block";
+    passMeterBarInner.style.width = "80%";
+    passMeterBarInner.style.background = "#26de81";
+  } else if (mediumPassword.test(singnUpPass.value)) {
+    passLebel.style.display = "block";
+    passLebel.innerText = "Modrate";
+    passLebel.style.color = "#fd9644";
 
-    passMeterBarInner.style.display = "block"
-    passMeterBarInner.style.width = "66%"
-    passMeterBarInner.style.background = "#fd9644"
-
+    passMeterBarInner.style.display = "block";
+    passMeterBarInner.style.width = "66%";
+    passMeterBarInner.style.background = "#fd9644";
   } else {
-    passLebel.style.display = "block"
-    passLebel.innerText = "Weak"
-    passLebel.style.color = "#fc5c65"
+    passLebel.style.display = "block";
+    passLebel.innerText = "Weak";
+    passLebel.style.color = "#fc5c65";
 
-    passMeterBarInner.style.display = "block"
-    passMeterBarInner.style.width = "33%"
-    passMeterBarInner.style.background = "#fc5c65"
+    passMeterBarInner.style.display = "block";
+    passMeterBarInner.style.width = "33%";
+    passMeterBarInner.style.background = "#fc5c65";
   }
 }
 
@@ -146,7 +151,7 @@ function savePassword() {
 
 const logIn = () => {
   let inputPassword = logInPass.value;
-    if (inputPassword === decode(passwordStoredInDB)) {
+  if (inputPassword === decode(passwordStoredInDB)) {
     logInMatch.style.display = "block";
     logInNotMatch.style.display = "none";
   } else {
