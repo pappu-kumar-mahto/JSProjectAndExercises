@@ -7,6 +7,7 @@ let SignUpSaved = document.getElementById("SignUpSaved");
 let SignUpNotSaved = document.getElementById("SignUpNotSaved");
 
 let passMeterBar = document.getElementById("passMeterBar")
+let passMeterLebel = document.getElementById("passMeterLebel")
 let passLebel = document.getElementById("passLebel")
 let passMeterBarInner = document.getElementById("passMeterBarInner")
 
@@ -107,6 +108,7 @@ const decode = (encodedStr) => {
 };
 
 function passwordStrengthCheck() {
+  passMeterLebel.style.display = "block"
   if (singnUpPass.value.length > 8) {
     passLebel.style.display = "block"
     passLebel.innerText = "Strong"

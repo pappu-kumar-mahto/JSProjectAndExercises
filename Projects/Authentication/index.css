@@ -30,7 +30,8 @@
     top: 0;
     left: 0; 
 }
-.passMeterLebel{
+#passMeterLebel{
+    display: none;
     color: #666;
     font-size: 1.2rem;
 }
