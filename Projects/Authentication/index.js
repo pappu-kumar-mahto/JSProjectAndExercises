@@ -6,11 +6,13 @@ let wrongSignUpPass = document.getElementById("wrongSignUpPassword");
 let SignUpSaved = document.getElementById("SignUpSaved");
 let SignUpNotSaved = document.getElementById("SignUpNotSaved");
 
+let passMeterBar = document.getElementById("passMeterBar")
+let passLebel = document.getElementById("passLebel")
+let passMeterBarInner = document.getElementById("passMeterBarInner")
+
 let logInPass = document.getElementById("logInPassword");
 let logInMatch = document.getElementById("logInMatch");
 let logInNotMatch = document.getElementById("logInNotMatch");
-
-let passwordStrength = document.getElementById("passwordStrength");
 
 const lookup = {
   A: "N",
@@ -104,6 +106,36 @@ const decode = (encodedStr) => {
   return decodedArr.join("");
 };
 
+function passwordStrengthCheck() {
+  if (singnUpPass.value.length > 8) {
+    passLebel.style.display = "block"
+    passLebel.innerText = "Strong"
+    passLebel.style.color = "#26de81"
+
+    passMeterBarInner.style.display = "block"
+    passMeterBarInner.style.width = "80%"
+    passMeterBarInner.style.background = "#26de81"
+
+  } else if (singnUpPass.value.length >= 5) {
+    passLebel.style.display = "block"
+    passLebel.innerText = "Modrate"
+    passLebel.style.color = "#fd9644"
+
+    passMeterBarInner.style.display = "block"
+    passMeterBarInner.style.width = "66%"
+    passMeterBarInner.style.background = "#fd9644"
+
+  } else {
+    passLebel.style.display = "block"
+    passLebel.innerText = "Weak"
+    passLebel.style.color = "#fc5c65"
+
+    passMeterBarInner.style.display = "block"
+    passMeterBarInner.style.width = "33%"
+    passMeterBarInner.style.background = "#fc5c65"
+  }
+}
+
 function savePassword() {
   let inputPassword = singnUpPass.value;
   passwordStoredInDB = encodeVal(inputPassword);
@@ -120,37 +152,3 @@ const logIn = () => {
     logInNotMatch.style.display = "block";
   }
 };
-
-let evaluatePassword = (password) => {
-  let score = 0;
-  score = password.length;
-  // console.log(score);
-  score = password.match(/[^A-Za-z0-9]/gmi)
-    ? score + 3
-    : score;
-  score = password.match(/([A-Z])/gm) ? score + 1 : score;
-  score = password.match(/[0-9]/gmi) ? score + 2 : score;
-  return score;
-};
-
-let scoreToData = (score) => {
-  if (score >= 15) {
-    return {
-      width: '100 %',
-      color: '#26de81',
-      label: 'Strong', 
-    }
-  } else if (score >= 11) {
-    return {
-      width: '66 %',
-      color: '#fd9644',
-      label: 'Modrate', 
-    }
-  } else {
-    return {
-      width: '33 %',
-      color: '#fc5c65',
-      label: 'Weak', 
-    }
-  }
-}

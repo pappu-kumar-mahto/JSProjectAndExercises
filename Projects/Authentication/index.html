@@ -14,12 +14,12 @@
         <div id="password">
             <div id="signup">
                 <label for="signUpPassword"></label>
-                <input type="password" id="signUpPassword" placeholder="Create your password">
-                <div class="passMeter">
-                    <div class="passMeterBar">
-                        <div class="passMeterBarInner js--passBarInner"></div>
+                <input type="password" id="signUpPassword" placeholder="Create your password" onkeyup="passwordStrengthCheck()">
+                <div id="passMeter">
+                    <div id="passMeterBar">
+                        <div id="passMeterBarInner"></div>
                     </div>
-                    <p class="passMeterLebel">Password Strength: <span class="js--passText"></span></p>
+                    <p class="passMeterLebel">Password Strength: <span id="passLebel"></span></p>
                 </div>
             </div>
 
