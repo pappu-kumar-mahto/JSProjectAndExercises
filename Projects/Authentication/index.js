@@ -108,6 +108,7 @@ const decode = (encodedStr) => {
 };
 
 function passwordStrengthCheck() {
+
   let strongPassword = new RegExp(
     "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-za-z0-9](?=.{8,}))"
   );
@@ -115,31 +116,43 @@ function passwordStrengthCheck() {
     "((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-za-z0-9])(?=.{5,})|(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-za-z0-9])(?=.{8,}))"
   );
 
-  passMeterLebel.style.display = "block";
-  if (strongPassword.test(singnUpPass.value)) {
-    passLebel.style.display = "block";
-    passLebel.innerText = "Strong";
-    passLebel.style.color = "#26de81";
-
-    passMeterBarInner.style.display = "block";
-    passMeterBarInner.style.width = "80%";
-    passMeterBarInner.style.background = "#26de81";
-  } else if (mediumPassword.test(singnUpPass.value)) {
-    passLebel.style.display = "block";
-    passLebel.innerText = "Modrate";
-    passLebel.style.color = "#fd9644";
-
-    passMeterBarInner.style.display = "block";
-    passMeterBarInner.style.width = "66%";
-    passMeterBarInner.style.background = "#fd9644";
+  if (singnUpPass.value === "") {
+    passLebel.style.display = "none"
+    passMeterLebel.style.display = "none"
+    passMeterBarInner.style.display = "none"
   } else {
-    passLebel.style.display = "block";
-    passLebel.innerText = "Weak";
-    passLebel.style.color = "#fc5c65";
-
-    passMeterBarInner.style.display = "block";
-    passMeterBarInner.style.width = "33%";
-    passMeterBarInner.style.background = "#fc5c65";
+    
+    passMeterLebel.style.display = "block"
+    if (strongPassword.test(singnUpPass.value)) {
+      
+      passLebel.style.display = "block"
+      passLebel.innerText = "Strong"
+      passLebel.style.color = "#26de81"
+      
+      passMeterBarInner.style.display = "block"
+      passMeterBarInner.style.width = "80%"
+      passMeterBarInner.style.background = "#26de81"
+      
+    } else if (mediumPassword.test(singnUpPass.value)) {
+      
+      passLebel.style.display = "block"
+      passLebel.innerText = "Modrate"
+      passLebel.style.color = "#fd9644"
+      
+      passMeterBarInner.style.display = "block"
+      passMeterBarInner.style.width = "66%"
+      passMeterBarInner.style.background = "#fd9644"
+      
+    } else {
+      
+      passLebel.style.display = "block"
+      passLebel.innerText = "Weak"
+      passLebel.style.color = "#fc5c65"
+      
+      passMeterBarInner.style.display = "block"
+      passMeterBarInner.style.width = "33%"
+      passMeterBarInner.style.background = "#fc5c65"
+    }
   }
 }
 
