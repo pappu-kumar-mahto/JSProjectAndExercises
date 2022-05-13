@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+  }
+
+  .nav-link{
+      opacity: 0.5;
+  }
+  .nav-link:hover{
+      opacity: 1;
+  }
+  <!------------------------------------------------------------------------------------------------------------------------------------------->
+/* SignUp */
+
+#passwordContainer{
+    text-align: center;
+    padding: 30px;
+}
+
+#signUpPassword, #logInPassword{
+    display: block;
+    margin: auto;
+}
+
+#passMeter{
+    width: 100%;
+    
+}
+#passMeterBar{
+    margin: auto;
+    width: 30%;
+    height: 1rem;
+    /* background: #eee; */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+    position: relative;
+}
+#passMeterBarInner{
+    width: 0;
+    height: 100%;
+    display: block;
+    position: absolute; 
+    top: 0;
+    left: 0; 
+}
+#passMeterLebel{
+    display: none;
+    color: #666;
+    font-size: 1rem;
+}
+.passMeterLebel span{
+    font-weight: bold;
+}
+.btn{
+    text-align: center;
+}
+button{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 10px;
+    color: #fff;
+    background-color: black;
+    border-radius: 8px;
+}
+button:hover{
+    cursor: pointer;
+    transition: width 200ms ease-in-out;
+}
+input {
+    display: block;
+    margin: auto;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    border-radius: 10px;
+  }
+
+div.valid, div.invalid, #passwordStrength{
+    display: none;
+}
+
+.valid{
+    color: green;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.invalid{
+    color: red;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+/* logIn */
+#loginForm{
+    display: none;
+}
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+  
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .mb-4{
+      border-radius: 100%;
+      width: 102px;
+       height: 102px;
+  }
