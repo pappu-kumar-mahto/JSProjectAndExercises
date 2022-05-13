@@ -316,10 +316,14 @@ let homePage = () => {
 }
 let signupForm = () => {
   document.getElementById('signupForm').style.display = "block",
+  document.getElementById('signupForm').style.backgroundColor = "azure",
+  document.getElementById('signupForm').style.borderRadius = "5px"
   document.getElementById('loginForm').style.display = "none"
 }
 let loginForm = () => {
   document.getElementById('loginForm').style.display = "block",
+  document.getElementById('loginForm').style.backgroundColor = " aliceblue",
+  document.getElementById('loginForm').style.borderRadius = "5px",
   document.getElementById('signupForm').style.display = "none"
 }
 
