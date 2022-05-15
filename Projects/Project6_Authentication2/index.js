@@ -122,7 +122,7 @@ let savePassword = ()=> {
 
 const logIn = () => {
   let inputPassword = logInPass.value;
-    if (inputPassword === decode(passwordStoredInDB) && emailStoredInDB === logInEmail.value) {
+    if (inputPassword === decode(passwordStoredInDB) && emailStoredInDB === logInEmail.value && (logInPassword.value !== "" || logInEmail.value !== "")) {
     logInMatch.style.display = "block";
     logInNotMatch.style.display = "none";
   } else {
@@ -325,6 +325,8 @@ let refresh = () => {
   lastNameInvalid.style.display = "none"
   emailValid.style.display = "none"
   emailInvalid.style.display = "none"
+  passMeterBarInner.style.display = "none"
+  passMeterLebel.style.display = "none"
   phoneNumberValid.style.display = "none"
   phoneNumberInvalid.style.display = "none"
   stateValid.style.display = "none"
@@ -332,22 +334,33 @@ let refresh = () => {
   zipCodeValid.style.display = "none"
   zipCodeInvalid.style.display = "none"
   tncInvalid.style.display = "none"
+  logInMatch.style.display = "none"
+  logInNotMatch.style.display = "none"
 
   firstName.value = ""
   lastName.value = ""
   email.value = ""
+  singnUpPass.value = ""
   phoneNumber.value = ""
   state.value = ""
   zipCode.value = ""
   tncCheckBox.checked = false
   submissionMsg.innerHTML = ""
+  passwordStoredInDB = ""
+  emailStoredInDB = ""
+  logInPass.value = ""
+  logInEmail.value = ""
 };
 
 /*************************************************************************************************************************************************************/
 /* Home Page first Look*/
 let homePage = () => {
-  document.getElementById('signupForm').style.display = "none",
-  document.getElementById('loginForm').style.display = "none"
+  (document.getElementById("signupForm").style.display = "none"),
+  (document.getElementById("loginForm").style.display = "none")
+  logInMatch.style.display = "none"
+  logInNotMatch.style.display = "none"
+  logInPass.value = ""
+  logInEmail.value = ""
 }
 let signupForm = () => {
   document.getElementById('signupForm').style.display = "block",
