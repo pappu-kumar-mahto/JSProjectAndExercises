@@ -1,9 +1,9 @@
 body {
     display: flex;
+    justify-content: center;
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #f5f5f5;
     background-image: url("https://cdn.pixabay.com/photo/2017/07/01/19/48/background-2462431_960_720.jpg");
   }
 
@@ -13,7 +13,7 @@ body {
   .nav-link:hover{
       opacity: 1;
   }
-  <!------------------------------------------------------------------------------------------------------------------------------------------->
+  <!---------------------------------------------------------------------------->
 /* SignUp */
 
 #passwordContainer{
@@ -95,7 +95,7 @@ div.valid, div.invalid, #passwordStrength{
     font-weight: bold;
     font-size: 1.3em;
 }
-<!------------------------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------->
 /* logIn */
 #loginForm{
     display: none;
@@ -132,3 +132,74 @@ div.valid, div.invalid, #passwordStrength{
       width: 102px;
        height: 102px;
   }
+
+  /****************************************************************************/
+/* Instruction for password */
+.instruction{
+    position: relative;
+    width: 0px;
+    height: 0px;
+    background: #37444b;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.instruction::before{
+    content: "";
+    position: absolute;
+    background: #37444b;
+    width: 40px;
+    height: 40px;
+    right: -15px;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: 0.5s;
+}
+.instruction.active{
+    width: 300px;
+    height: 250px;
+    transition-delay: 0.5s;
+}
+.instruction.active::before{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+.toggleBtn{
+    position: absolute;
+    min-width:250px;
+    height: 30px;
+    padding-left: 10px;
+    background: #0bcf9c;
+    border-radius:10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.toggleBtn::before{
+    content: "click to read Password Condition";
+    font-size: 1em;
+    color: #fff;
+}
+.instruction.active .toggleBtn{
+    top: 45%;
+    right: -85%;
+    background: #ff5a57;
+}
+
+.instruction .content{
+   min-width: 400px;
+    padding: 80px;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0);
+}
+.instruction.active .content{
+    opacity: 1;
+    transition-delay: 0.5s;
+    transform: scale(1); 
+}

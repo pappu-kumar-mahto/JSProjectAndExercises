@@ -378,3 +378,12 @@ let loginForm = () => {
 let emailInput = () => {
   emailStoredInDB = signUpEmail.value
 }
+/*************************************************************************************************/
+// instruction for password input
+
+let toggleBtn = document.querySelector('.toggleBtn')
+let instruction = document.querySelector('.instruction')
+
+toggleBtn.onclick = () => {
+    instruction.classList.toggle('active')
+}
