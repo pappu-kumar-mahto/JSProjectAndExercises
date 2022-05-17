@@ -1,0 +1,27 @@
+.container{
+    text-align: center;
+}
+
+#orderId{
+    padding: 10px 15px;
+    margin: 10px auto;
+    width: 40vw;
+}
+
+#executeBtn{
+    padding: 10px;
+    margin: 5px 0px 10px 0px;
+    background: deepskyblue;
+    color: blanchedalmond;
+    font-size: 1.45em;
+    border-radius: 8px;
+    width: 280px;
+    cursor: pointer;
+}
+
+.orderStatus{
+    border: 1.5px solid black;
+    width: 40vw;
+    margin: 10px auto;
+    padding: 13px;
+}
