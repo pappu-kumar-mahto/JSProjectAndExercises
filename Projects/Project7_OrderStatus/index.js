@@ -75,11 +75,14 @@ const executeOrder = (callback) => {
 									packageAtCounter.style.display = 'block'
 									packageAtCounter.style.color = '#700391'
 									packageAtCounter.style.background = '#14e356'
-									finalCall.style.display = 'block'
-									finalCall.style.color = '#700391'
-									finalCall.style.transition= "all 2s ease-in-out"
-									finalCall.style.background = '#14e356'
-									callback()
+									setTimeout(() => {
+										finalCall.style.display = 'block'
+										finalCall.style.color = '#700391'
+										finalCall.style.transition= "all 2s ease-in-out"
+										finalCall.style.background = '#14e356'
+										callback()
+									},2000)
+									
 								}, 2000)
 
 							}, 8000)
@@ -96,3 +99,4 @@ const executeOrder = (callback) => {
 		
 	}, 2000)
 }
+
