@@ -9,18 +9,22 @@
 </head>
 <body>
     <div class="container" id="order">
-        <input type="text" id="orderId" placeholder="Please Enter OrderId">
+        <h2 id="heading">Order Your Pizza</h2>
+        <input type="text" id="orderId" placeholder="Please Enter OrderId" required>
         <br>
-        <button id="executeBtn">Execute</button>
+        <button onclick="executeOrder(()=>{
+           'The order is ready and handed over to the Zomato guy!'
+        })" id="executeBtn">Execute</button>
         <div id="statusBlock">
+            <h4 id="orderHeading">Order Status</h4>
             <div class="orderStatus" id="orderPlace">Order Placed</div>
             <div class="orderStatus" id="chefRecieve">Chef recieved the order and started preparing</div>
             <div class="orderStatus" id="pizzaSause">Pizza sause added</div>
             <div class="orderStatus" id="firstCheeze">First layer of cheeze added</div>
-            <div class="orderStatus" id="topping">Topping added</div>
+            <div class="orderStatus" id="toppingAdded">Topping added</div>
             <div class="orderStatus" id="secondCheeze">Second layer of cheeze added</div>
             <div class="orderStatus" id="pizzaBaked">Pizza baked!</div>
-            <div class="orderStatus" id="oregano">Oregano added and packed</div>
+            <div class="orderStatus" id="oreganoAdded">Oregano added and packed</div>
             <div class="orderStatus" id="packageAtCounter">Package recieved at counter</div>
             <div class="orderStatus" id="finalCall">The order is ready and handed over to the Zomato guy!</div>
         </div>
