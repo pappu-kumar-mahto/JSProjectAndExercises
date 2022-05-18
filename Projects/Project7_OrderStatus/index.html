@@ -9,14 +9,14 @@
 </head>
 <body>
     <div class="container" id="order">
-        <h2 id="heading">Order Your Pizza</h2>
+        <h1 id="heading">Order Status Management</h1>
         <input type="text" id="orderId" placeholder="Please Enter OrderId" required>
         <br>
         <button onclick="executeOrder(()=>{
-           alert('Order Completed')
+           addDoneClass(9)
         })" id="executeBtn">Execute</button>
         <div id="statusBlock">
-            <h4 id="orderHeading">Order Status</h4>
+            <h2 id="orderHeading"></h2>
             <div class="orderStatus" id="orderPlace">Order Placed</div>
             <div class="orderStatus" id="chefRecieve">Chef recieved the order and started preparing</div>
             <div class="orderStatus" id="pizzaSause">Pizza sause added</div>

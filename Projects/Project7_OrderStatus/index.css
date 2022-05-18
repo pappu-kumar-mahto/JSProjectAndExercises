@@ -1,33 +1,46 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(to left bottom, #c3c4c6, #babfc3, #b0babe, #a6b6b8, #9db1b0);
+}
 .container{
     text-align: center;
+    
 }
 #heading{
+    background: #14e356;
     padding: 5px;
     letter-spacing: 3px;
-    margin: 5px;
+    margin:0 0 10px 0;
+    background-image: radial-gradient(circle, #a0b5d3, #799add, #637ae1, #6554db, #790bc9);
 }
 #orderHeading{
     padding: 3px;
     letter-spacing: 3px;
     margin: 5px 0;
+    font-family: monospace;
 }
 #orderId{
     padding: 10px 15px;
     margin: 10px auto;
     width: 40vw;
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 500;
+    border-color: #799add;
+}
+#orderId::-webkit-input-placeholder{
+    text-align: center;
 }
 
 #executeBtn{
     padding: 10px;
     margin: 5px 0px 10px 0px;
-    background: #9630f0;
+    background-image: radial-gradient(circle, #a0b5d3, #799add, #637ae1, #6554db, #790bc9);
     color: #05f7cb;
     font-size: 1.45em;
     border-radius: 8px;
     width: 280px;
     cursor: pointer;
+    border-style: none;
 }
 
 #statusBlock{
@@ -37,10 +50,21 @@
 
 .orderStatus{
     border: 1.5px solid black;
-    width: 40vw;
-    margin: 6.5px auto;
-    padding: 10px;
+    width: 25vw;
+    margin: 8px auto;
+    padding: 15px 0;
     background: rgba(181, 174, 174, 0.738);
-    border-radius:5px;
+    border-radius:40px;
     color: #dae6de;
+    border-color:  #9db1b0;
+}
+.orderStatus:last-child{
+    margin-bottom: 25px;
+}
+
+.done{
+    transition: all 2s ease-in-out;
+    color: #700391;
+    background : #14e356;
+    border-color:  #51f299;
 }
