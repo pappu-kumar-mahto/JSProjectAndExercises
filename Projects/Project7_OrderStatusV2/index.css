@@ -1,0 +1,44 @@
+body{
+    background-image: linear-gradient(to left bottom, #c3c4c6, #babfc3, #b0babe, #a6b6b8, #9db1b0);
+}
+.container{
+    text-align: center;
+}
+.mainHeading{
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+    background: #14e356;
+    padding: 5px;
+    letter-spacing: 3px;
+    background-image: radial-gradient(circle, #a0b5d3, #799add, #637ae1, #6554db, #790bc9);
+}
+.orderIdInput{
+    margin: 10px auto;
+    text-align: center;
+    width: 30vw;
+    border-color: #799add;
+}
+
+#executeBtn{
+    margin-bottom: 10px;
+    padding: 10px;
+    margin: 5px 0px 10px 0px;
+    background-image: radial-gradient(circle, #a0b5d3, #799add, #637ae1, #6554db, #790bc9);
+    color: #05f7cb;
+    font-size: 1.45em;
+    border-radius: 8px;
+    width: 280px;
+    cursor: pointer;
+    border-style: none;
+    
+}
+
+.outerBlock{
+    margin-bottom: 15px;
+}
+
+.card-header{
+    font-family: monospace;
+    letter-spacing: 1px;
+}
