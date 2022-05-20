@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Promises 4</title>
+    <script>
+        let promise1 = new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                resolve("[Promise1] I got resolved")
+                
+            },5000)
+        })
+
+        let promise2 = new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                resolve("[Promise2] I got resolved")
+                
+            },3000)
+        })
+
+        let promise3 = new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                resolve("[Promise3] I got resolved")
+                
+            },8000)
+        })
+        
+        // promise1
+        // .then(promise2)
+        // .then(promise3)
+        // .then(()=>console.log("Congratulations! All Promises Resolved"))
+        // .catch((err)=>console.log(err))
+
+        Promise.all([promise1, promise2, promise3])
+        .then((res)=>console.log(res))
+        .catch((err)=>console.log(err))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

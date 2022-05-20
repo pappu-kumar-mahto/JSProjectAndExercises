@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Promises</title>
+    <script>
+       
+        const chefRecieve = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('Chef received the order and started preparing')
+                    resolve()
+                }, 2000)
+            })
+        }
+
+        const pizzaSauceAdded = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('Pizza Sauce added')
+                    resolve()
+                }, 5000)
+            })
+        }
+
+        const firstLayerAdded = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('First layer of cheeze added')
+                    resolve()
+                }, 10000)
+            })
+        }
+
+        const toppingAdded = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('Toppings added')
+                    resolve()
+                }, 12000)
+            })
+        }
+
+        const secondLayerAdded = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('Second layer of cheeze added')
+                    resolve()
+                }, 5000)
+            })
+        }
+
+        const pizaaBaked = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('Pizza baked!')
+                    resolve()
+                }, 15000)
+            })
+        }
+
+        const oreganoAdded = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('Oregano added and packed')
+                    resolve()
+                }, 8000)
+            })
+        }
+
+        const packageRecievedAtCounter = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('Package received at counter')
+                    resolve()
+                }, 2000)
+            })
+        }
+
+        const executeOrder = () => {
+                console.log('Order Placed')
+                chefRecieve()
+                    .then(pizzaSauceAdded)
+                    .then(firstLayerAdded)
+                    .then(toppingAdded)
+                    .then(secondLayerAdded)
+                    .then(pizaaBaked)
+                    .then(oreganoAdded)
+                    .then(packageRecievedAtCounter)
+                    .then(() =>console.log("Order is ready and handed over to Zomato guy!"))
+                    .catch((err) =>console.log(err))
+            }
+    </script>
+</head>
+
+<body>
+    <button onClick="executeOrder()">Execute Order</button>
+</body>
+
+</html>
