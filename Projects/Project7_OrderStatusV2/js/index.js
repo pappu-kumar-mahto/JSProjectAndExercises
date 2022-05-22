@@ -1,10 +1,14 @@
+let emptyImgId = document.getElementById('emptyImgId')
 
 const executeOrder = () => {
+  
 
-    if (!inputOrderId.value.length) {
-        alert("Please Enter a  Valid OrderID!!")
-        return
-    }
+  if (!inputOrderId.value.length) {
+    emptyImgId.style.display = "block";
+    alert("Pleasee Enter a  Valid OrderID!!");
+    return;
+  }
+  emptyImgId.style.display = "none";
 
   createNewCol(inputOrderId.value.toUpperCase());
   
@@ -24,7 +28,7 @@ const executeOrder = () => {
     .then(() =>
       addFooterP(orderIdStatus, "Order is ready and handed over to Zomato guy!")
     )
-    .catch((err) => console.log(err));
+    .catch((err) => alert(err));
 };
 
 const clearOrder = () => {

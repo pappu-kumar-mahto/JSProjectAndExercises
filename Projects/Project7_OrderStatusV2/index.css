@@ -1,18 +1,23 @@
 body{
     background-image: linear-gradient(to left bottom, #c3c4c6, #babfc3, #b0babe, #a6b6b8, #9db1b0);
 }
-.container{
-    text-align: center;
-}
+
+/**************** Heading Section *****************/
 .mainHeading{
     text-align: center;
     margin-bottom: 15px;
     width: 100%;
-    background: #14e356;
     padding: 5px;
     letter-spacing: 3px;
     background-image: radial-gradient(circle, #a0b5d3, #799add, #637ae1, #6554db, #790bc9);
 }
+
+/**************** Container Section *****************/
+.container{
+    text-align: center;
+}
+
+/**************** Input Section *****************/
 .orderIdInput{
     margin: 10px auto;
     text-align: center;
@@ -20,6 +25,7 @@ body{
     border-color: #799add;
 }
 
+/**************** ExecuteBtn Section *****************/
 #executeBtn{
     margin-bottom: 10px;
     padding: 10px;
@@ -34,6 +40,7 @@ body{
     
 }
 
+/**************** Main Section *****************/
 .outerBlock{
     margin-bottom: 15px;
     border-radius:20px;
@@ -46,6 +53,15 @@ body{
     border-radius: 20px 20px 0 0 !important;
 }
 
+/**************** CancelBtn Section *****************/
 .footerBtn{
     border-radius: 0 0 20px 20px;
+}
+
+/**************** Image Section *****************/
+#emptyImgId{
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    border-radius:100%;
 }
