@@ -36,9 +36,16 @@ body{
 
 .outerBlock{
     margin-bottom: 15px;
+    border-radius:20px;
 }
 
 .card-header{
     font-family: monospace;
     letter-spacing: 1px;
+    background: rgb(185, 181, 181);
+    border-radius: 20px 20px 0 0 !important;
+}
+
+.footerBtn{
+    border-radius: 0 0 20px 20px;
 }
