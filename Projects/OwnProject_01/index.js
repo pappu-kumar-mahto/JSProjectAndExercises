@@ -3,7 +3,7 @@ let rgbStatus = document.querySelector('#rgbSpan')
 
 let colors = generateRandomColor(6)
 
-let pickedColor = colors[Math.trunc(Math.random() * 6) + 1]
+let pickedColor = colors[Math.trunc(Math.random() * 6)]
 
 rgbStatus.textContent = pickedColor
 
@@ -28,7 +28,7 @@ easyBtn.addEventListener('click', () => {
     
     boxCount = 3
     colors = generateRandomColor(boxCount)
-    pickedColor = colors[Math.trunc(Math.random() * 3) + 1]
+    pickedColor = colors[Math.trunc(Math.random() * 3)]
     rgbStatus.textContent = pickedColor
     
     for (let i = 0; i < boxes.length; i++){
@@ -52,7 +52,7 @@ hardBtn.addEventListener('click', () => {
     playBtn.style.color = "rgb(245, 168, 181)"
     boxCount = 6
     colors = generateRandomColor(boxCount)
-    pickedColor = colors[Math.trunc(Math.random() * 6) + 1]
+    pickedColor = colors[Math.trunc(Math.random() * 6)]
     rgbStatus.textContent = pickedColor
     
     for (let i = 0; i < boxes.length; i++) {
@@ -64,16 +64,19 @@ hardBtn.addEventListener('click', () => {
 playBtn.addEventListener('click', () => {
     document.querySelector('h1').style.background = "rgb(245, 168, 181)"
     statusText.textContent = "Let's Play!!"
+    
+    colors = generateRandomColor(boxCount)
+    pickedColor = colors[Math.trunc(Math.random() * boxCount)]
+    console.log(colors[Math.trunc(Math.random() * boxCount)])
+    rgbStatus.textContent = pickedColor
+    console.log(rgbStatus)
+    console.log(pickedColor)
     playBtn.style.background = "rgb(245, 168, 181)"
     playBtn.style.color = "#ffffff"
     easyBtn.style.background = "#ffffff"
     easyBtn.style.color = "rgb(245, 168, 181)"
     hardBtn.style.background = "#ffffff"
     hardBtn.style.color = "rgb(245, 168, 181)"
-
-    colors = generateRandomColor(boxCount)
-    pickedColor = colors[Math.trunc(Math.random() * boxCount) + 1]
-    rgbStatus.textContent = pickedColor
 
     for (let i = 0; i < boxes.length; i++){
         boxes[i].style.background = colors[i]
@@ -111,9 +114,9 @@ function generateRandomColor(num) {
 }
 
 function randomColor() {
-    let r = Math.trunc(Math.random() * 255) + 1
-    let g = Math.trunc(Math.random() * 255) + 1
-    let b = Math.trunc(Math.random() * 255) + 1
+    let r = Math.trunc(Math.random() * 255)
+    let g = Math.trunc(Math.random() * 255)
+    let b = Math.trunc(Math.random() * 255)
 
     return "rgb(" + r +", " + g +", " + b +")"
 
