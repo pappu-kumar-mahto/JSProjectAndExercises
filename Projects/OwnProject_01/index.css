@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    background-color:aquamarine
+}
+.container{
+    text-align: center;
+    margin: 0;
+    background-color:aquamarine
+}
+
+h1{
+    margin: 0;
+    background-color: rgb(245, 168, 181);
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 200%;
+}
+
+#rgbSpan{
+    font-size: 180%;
+}
+#menuBar{
+    background-color:#ffffff;
+}
+#status{
+    display: inline-block;
+    width: 235px;
+    font-size: 1.4em;
+}
+
+button{
+    border: none;
+    font-size: 25px;
+    background-color: #ffffff;
+}
+
+.mainBox{
+    height: 400px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.box{
+    border: none;
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin: 15px 23px;
+    border-radius:25px;
+}
