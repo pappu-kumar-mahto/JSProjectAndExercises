@@ -1,3 +1,9 @@
+/**************************************DOM Selection*************************************/
+
+let playBtn = document.querySelector('#newGame')
+let easyBtn = document.querySelector('#easyBtn')
+let hardBtn = document.querySelector('#hardBtn')
+
 let boxes = document.querySelectorAll('.box')
 let rgbStatus = document.querySelector('#rgbSpan')
 
@@ -7,13 +13,11 @@ let pickedColor = colors[Math.trunc(Math.random() * 6)]
 
 rgbStatus.textContent = pickedColor
 
-let playBtn = document.querySelector('#newGame')
-let easyBtn = document.querySelector('#easyBtn')
-let hardBtn = document.querySelector('#hardBtn')
-
 let boxCount = 6
 let statusText = document.querySelector('#status')
 statusText.textContent = "Let's Play!!"
+
+/**************************************Easy Button Function*************************************/
 
 easyBtn.addEventListener('click', () => {
     document.querySelector('h1').style.background = "rgb(245, 168, 181)"
@@ -40,6 +44,8 @@ easyBtn.addEventListener('click', () => {
     }
 })
 
+/**************************************Hard Button Function*************************************/
+
 hardBtn.addEventListener('click', () => {
     document.querySelector('h1').style.background = "rgb(245, 168, 181)"
     statusText.textContent = "Let's Play!!"
@@ -60,6 +66,8 @@ hardBtn.addEventListener('click', () => {
         boxes[i].style.display = 'block'
     }
 })
+
+/**************************************New Game Button Function*************************************/
 
 playBtn.addEventListener('click', () => {
     document.querySelector('h1').style.background = "rgb(245, 168, 181)"
@@ -82,28 +90,7 @@ playBtn.addEventListener('click', () => {
     }
 })
 
-for (let i = 0; i < colors.length; i++){
-    boxes[i].style.background = colors[i]
-    boxes[i].addEventListener('click', () => {
-        let selectColor = boxes[i].style.background
-        if (selectColor === pickedColor)
-            win()
-        else {
-            boxes[i].style.transition = "all 1s ease-in-out"
-            boxes[i].style.backgroundColor = "aquamarine"
-            statusText.textContent = "Try Again!"
-        }
-    })
-}
-
-const win = () => {
-    for (let i = 0; i < colors.length; i++){
-        boxes[i].style.background = pickedColor
-    }
-    document.querySelector('h1').style.background = pickedColor
-    statusText.textContent = "Correct!"
-}
-
+/**************************************Random Color Generation Function*************************************/
 
 function generateRandomColor(num) {
     let arr = []
@@ -117,7 +104,5 @@ function randomColor() {
     let r = Math.trunc(Math.random() * 255)
     let g = Math.trunc(Math.random() * 255)
     let b = Math.trunc(Math.random() * 255)
-
     return `rgb(${r}, ${g}, ${b})`
-
 }
