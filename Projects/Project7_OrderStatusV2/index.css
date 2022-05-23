@@ -44,6 +44,7 @@ body{
 .outerBlock{
     margin-bottom: 15px;
     border-radius:20px;
+    border: none;
 }
 
 .card-header{
@@ -51,6 +52,22 @@ body{
     letter-spacing: 1px;
     background: rgb(185, 181, 181);
     border-radius: 20px 20px 0 0 !important;
+}
+
+.card-title{
+    font-weight: bold;
+    color: #790bc9;
+}
+
+.card-text{
+    color: #230cd5a6;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3em;
+}
+
+.card-span{
+    color: rgb(8, 232, 42);
+    font-weight: bold;
 }
 
 /**************** CancelBtn Section *****************/

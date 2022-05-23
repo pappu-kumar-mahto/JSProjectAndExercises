@@ -9,11 +9,12 @@ const createNewCol = (OrderId) => {
   let newCardTitleH5 = document.createElement("h5");
   let newCardTextP = document.createElement("p");
   let newCardStatusDiv = document.createElement("div");
+  let newCardSpan = document.createElement("span");
   let newCardButtonA = document.createElement("a");
 
   newCardHeaderDiv.innerText = "Oredr ID: " + OrderId;
-  newCardTitleH5.innerText = "Bill Amount: ";
-  newCardTextP.innerText = "Order Product: ";
+  newCardTitleH5.innerText = "Bill Amount: $120";
+  newCardTextP.innerText = "Ordered Product: Pan-Pizza";
   newCardStatusDiv.innerText = "Order Status: ";
   newCardButtonA.innerText = "Cancel Order!";
 
@@ -23,9 +24,11 @@ const createNewCol = (OrderId) => {
   newCardBodyDiv.classList = "card-body";
   newCardTitleH5.classList = "card-title";
   newCardTextP.classList = "card-text";
+  newCardSpan.classList = "card-span";
   newCardButtonA.classList = "btn btn-danger footerBtn";
 
-  newCardStatusDiv.id = inputOrderId.value;
+  // newCardStatusDiv.id = inputOrderId.value;
+  newCardSpan.id = inputOrderId.value;
 
   parentDiv.appendChild(newColDiv);
   newColDiv.appendChild(newCardDiv);
@@ -34,6 +37,7 @@ const createNewCol = (OrderId) => {
   newCardBodyDiv.appendChild(newCardTitleH5);
   newCardBodyDiv.appendChild(newCardTextP);
   newCardBodyDiv.appendChild(newCardStatusDiv);
+  newCardStatusDiv.appendChild(newCardSpan)
   newCardDiv.appendChild(newCardButtonA);
 
   newCardButtonA.addEventListener("click", () => {

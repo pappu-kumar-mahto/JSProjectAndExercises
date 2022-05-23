@@ -1,6 +1,6 @@
 const addFooterP = (orderNumber, orderStatus) => {
   let footerData = document.getElementById(orderNumber)
-  footerData.innerText = "Order Status: " + orderStatus;
+  footerData.innerText = orderStatus;
 };
 
 const chefRecieve = (orderNumber) => {
