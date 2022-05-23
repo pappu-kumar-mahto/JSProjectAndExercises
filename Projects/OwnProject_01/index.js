@@ -89,6 +89,7 @@ for (let i = 0; i < colors.length; i++){
         if (selectColor === pickedColor)
             win()
         else {
+            boxes[i].style.transition = "all 1s ease-in-out"
             boxes[i].style.backgroundColor = "aquamarine"
             statusText.textContent = "Try Again!"
         }
