@@ -67,10 +67,9 @@ playBtn.addEventListener('click', () => {
     
     colors = generateRandomColor(boxCount)
     pickedColor = colors[Math.trunc(Math.random() * boxCount)]
-    console.log(colors[Math.trunc(Math.random() * boxCount)])
+   
     rgbStatus.textContent = pickedColor
-    console.log(rgbStatus)
-    console.log(pickedColor)
+   
     playBtn.style.background = "rgb(245, 168, 181)"
     playBtn.style.color = "#ffffff"
     easyBtn.style.background = "#ffffff"
