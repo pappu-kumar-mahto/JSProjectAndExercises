@@ -117,6 +117,6 @@ function randomColor() {
     let g = Math.trunc(Math.random() * 255)
     let b = Math.trunc(Math.random() * 255)
 
-    return "rgb(" + r +", " + g +", " + b +")"
+    return `rgb(${r}, ${g}, ${b})`
 
 }
