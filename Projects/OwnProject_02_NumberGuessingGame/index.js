@@ -52,8 +52,10 @@ const checkEquality = (numGussed) => {
 }
 newGame.addEventListener("click", () => {
     actualNum = Math.trunc(Math.random() * 100) + 1
-    leftGuess.innerText = "Guesses Left: "
+    leftGuess.innerText = ""
     rightGuess.innerText = ""
     newGame.innerText = ""
     gussesLeft = 10
+    ansArray = []
+    previousGuess.innerText = ""
 })

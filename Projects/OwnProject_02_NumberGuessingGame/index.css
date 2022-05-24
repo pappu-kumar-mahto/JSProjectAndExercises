@@ -1,17 +1,36 @@
 .container{
-    border: 2px solid black;
+    border-radius: 15px;
     height: 500px;
     width: 500px;
     margin: 50px auto;
     text-align: center;
+    background-image: url("https://media.proprofs.com/images/QM/user_images/2290773/1531093844.jpeg");
+}
+.container>h1{
+    background-color: cyan;
+    margin: 0;
+    font-family: sans-serif;
+    padding: 5px;
+    border-radius: 15px 15px 0 0;
 }
 
+h4{
+    background-color: aquamarine;
+    margin: 0;
+    padding: 5px;
+    font-family: sans-serif;
+}
+h1{
+    color: rgba(241, 112, 13, 0.97);
+    
+}
 #inputId{
     text-align: center;
     width: 380px;
     height: 50px;
     font-size: 2em;
     border-radius: 15px;
+    border-color: aqua;
 }
 
 #submitBtn{
@@ -28,6 +47,8 @@
 
 .response{
     margin: 15px 0px ;
-    font-family: sans-serif;
+    font-family: system-ui;
     font-weight: bolder;
+    color: rgba(241, 112, 13, 0.97);
+    background: rgba(0, 0, 0, 0.6);
 }
