@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Promises 4</title>
-    <script>
-        let promise1 = new Promise((resolve, reject) =>{
-            setTimeout(() => {
-                resolve("[Promise1] I got resolved")
-                
-            },5000)
-        })
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Promises</title>
+	<script>
+		let promise1 = new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve('[PROMISE 1] I got resolved')
+			}, 1000)
+		})
 
-        let promise2 = new Promise((resolve, reject) =>{
-            setTimeout(() => {
-                resolve("[Promise2] I got resolved")
-                
-            },3000)
-        })
+		let promise2 = new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve('[PROMISE 2] I got resolved!')
+			}, 3000)
+		})
 
-        let promise3 = new Promise((resolve, reject) =>{
-            setTimeout(() => {
-                resolve("[Promise3] I got resolved")
-                
-            },8000)
-        })
-        
-        // promise1
-        // .then(promise2)
-        // .then(promise3)
-        // .then(()=>console.log("Congratulations! All Promises Resolved"))
-        // .catch((err)=>console.log(err))
+		let promise3 = new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve('[PROMISE 3] I got resolved!')
+			}, 5000)
+		})
 
-        Promise.all([promise1, promise2, promise3])
-        .then((res)=>console.log(res))
-        .catch((err)=>console.log(err))
-    </script>
+		// promise1
+		// 	.then((resolvedMessage) => console.log(resolvedMessage))
+		// 	.catch((rejectedMessage) => console.log(rejectedMessage))
+		// promise2
+		// 	.then((resolvedMessage) => console.log(resolvedMessage))
+		// 	.catch((rejectedMessage) => console.log(rejectedMessage))
+		// promise3
+		// 	.then((resolvedMessage) => console.log(resolvedMessage))
+		// 	.catch((rejectedMessage) => console.log(rejectedMessage))
+
+		// Promise.all()
+		// Promise.all([promise1, promise2, promise3])
+		// 	.then((resolvedMessage) => console.log(resolvedMessage))
+		// 	.catch(err => console.log(err))
+		
+		/*
+			- Will only resolve if 'ALL' promises gets resolved (can be related to && opeartor)
+			- Overall resolved value will be an array of resolved values from all promises
+			- rejected value will be the first rejected promise value
+			- Overall promise resolve time = resolve time of promise which takes the largest time
+		*/
+
+		// Promise.any()
+		Promise.any([promise1, promise2, promise3])
+			.then((resolvedMessage) => console.log(resolvedMessage))
+			.catch(err => console.log(err))
+
+		/*
+			- Will resolve even if a 'SINGLE' promise gets resolved (can be related to || opeartor)
+			- Overall resolved value = Resolved value of first resolved promise
+			- Rejected promises will be skipped, If all promises are rejected - Promise.any will be rejected (catch handler will work)
+			- Overall promise resolve time = resolve time of promise which takes the shortest time
+		*/
+	</script>
 </head>
 <body>
-    
+	
 </body>
 </html>
