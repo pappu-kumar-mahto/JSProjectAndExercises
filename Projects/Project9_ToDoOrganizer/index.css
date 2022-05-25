@@ -27,3 +27,25 @@
     text-align: center;
 }
 
+.col-12{
+    border: 1px solid black;
+    padding: 8px ;
+    margin-bottom: 5px;
+}
+.col-12 button{
+    float: right;
+    margin: 0px 3px;
+}
+
+.card{
+    margin: 10px;
+}
+.card-header{
+    background: none;
+}
+.card-title{
+    margin-bottom: 20px;
+}
+.card-body .btn-danger{
+    width: 100%;
+}
