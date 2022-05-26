@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class</title>
+</head>
+
+<body>
+    <script>
+        class Student {
+            constructor(name, batch, techStack, subjectMarks) {
+                this.name = name
+                this.batch = batch
+                this.techStack = techStack
+                this.subjectMarks = subjectMarks
+            }
+
+            displayInfo(){
+                console.log(`${this.name} is from ${this.batch} and learning ${this.techStack} stack technology.`)
+            }
+
+            displayMarks() {
+                this.subjectMarks.forEach((singleSubject, index) => {
+                    console.log(`[SUBJECT ${index + 1}] ${singleSubject.subject}: ${singleSubject.marks}`)
+                })
+            }
+            isPass() {
+                return this.subjectMarks.every(singleMark => singleMark.marks >= 35)
+            }
+
+            calculateAvg() {
+                let sum = 0
+                this.subjectMarks.forEach((singleMark) => {
+                    sum += singleMark.marks
+                })
+                console.log(`Average Marks Obtained: ${sum / this.subjectMarks.length}`)
+            }
+        }
+
+        const Pappu = new Student('Pappu', 'Batch 10', 'MEVN',
+            [
+                {
+                    subject: 'Mathematics',
+                    marks: 86
+                },
+                {
+                    subject: 'Science',
+                    marks: 35
+                },
+                {
+                    subject: 'Social Science',
+                    marks: 65
+                },
+                {
+                    subject: 'English',
+                    marks: 98
+                },
+                {
+                    subject: 'Hindi',
+                    marks: 87
+                }
+            ])
+        Pappu.displayInfo()
+        Pappu.displayMarks()
+        console.log(Pappu.isPass() ? 'Result: PASS' : 'Result: FAIL')
+        Pappu.calculateAvg()
+    </script>
+</body>
+
+</html>
