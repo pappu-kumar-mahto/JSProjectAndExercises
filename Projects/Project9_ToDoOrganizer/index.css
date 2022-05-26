@@ -37,15 +37,19 @@
     margin: 0px 3px;
 }
 
-.card{
-    margin: 10px;
+.toDoCard{
+    margin: 15px;
+    box-shadow: 5px 10px 8px #888888;
 }
-.card-header{
+.toDoCard .card-header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     background: none;
 }
 .card-title{
     margin-bottom: 20px;
 }
 .card-body .btn-danger{
-    width: 100%;
+    float: right;
 }
