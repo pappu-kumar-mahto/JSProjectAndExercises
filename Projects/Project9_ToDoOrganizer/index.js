@@ -53,16 +53,21 @@ const createToDoCard = (newToDo, priority, deadline) => {
 /******************ADD NEW TASK TO "To-Do" SECTION*********************/
 
 addNewTask.addEventListener("click", () => {
+  const Datevalue = moment(toDoDeadLine.value).format("YYYY/MM/DD h:mm A");
+  console.log(Datevalue);
+  console.log(newDate)
   if (
     !toDoInput.value ||
     selectPriority.value === "Select Priority" ||
-    !toDoDeadLine.value
+    !toDoDeadLine.value ||
+    newDate > Datevalue
   ) {
     alert("Please Enter a TO-DO, Select Priority and Enter a valid DateTime");
     return;
   }
-
-  const Datevalue = moment(toDoDeadLine.value).format("YYYY/MM/DD h:mm A");
-
   createToDoCard(toDoInput.value, selectPriority.value, Datevalue);
 });
+
+/******************CURRENT DATE and TIME*********************/
+
+const newDate = moment(new Date()).format("YYYY/MM/DD h:mm A");
