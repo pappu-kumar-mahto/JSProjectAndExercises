@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class</title>
+</head>
+
+<body>
+    <script>
+        class Student {
+            constructor(name, batch, techStack, subjectMarks) {
+                this.name = name
+                this.batch = batch
+                this.techStack = techStack
+                this.subjectMarks = subjectMarks
+            }
+
+           inputMarks(marksArray){
+               this.subjectMarks.map((singleMarks, index) => singleMarks.marks = marksArray[index])
+           }
+        }
+
+        const Pappu = new Student('Pappu', 'Batch 10', 'MEVN',
+            [
+                {
+                    subject: 'Mathematics',
+                    marks: 0
+                },
+                {
+                    subject: 'Science',
+                    marks: 0
+                },
+                {
+                    subject: 'Social Science',
+                    marks: 0
+                },
+                {
+                    subject: 'English',
+                    marks: 0
+                },
+                {
+                    subject: 'Hindi',
+                    marks: 0
+                }
+            ])
+            Pappu.inputMarks([45,35,65,75,85])
+        console.log(Pappu)
+    </script>
+</body>
+
+</html>
