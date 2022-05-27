@@ -38,8 +38,8 @@
 		// 		this.techStack = techStack
 		// 	}
 
-		// 	// Methods
-		// 	// Getter Method
+		// Methods
+		// 	// Getter Methods (Accessing object properties)
 		// 	displayInfo(){
 		// 		console.log(`${this.name} from ${this.batch} is currently learning ${this.techStack} stack technology.`)
 		// 	}
@@ -88,60 +88,113 @@
 
 		/* ------------------------------------------------------ */
 
-		class Student {
-			constructor(name, batch, techStack, subjectMarks){
-				this.name = name
-				this.batch = batch
-				this.techStack = techStack
-				this.subjectMarks = subjectMarks
+        // class Student {
+        //     constructor(name, batch, techStack, subjectMarks) {
+        //         this.name = name
+        //         this.batch = batch
+        //         this.techStack = techStack
+        //         this.subjectMarks = subjectMarks
+        //     }
+
+        //     displayInfo(){
+        //         console.log(`${this.name} is from ${this.batch} and learning ${this.techStack} stack technology.`)
+        //     }
+
+        //     displayMarks() {
+        //         this.subjectMarks.forEach((singleSubject, index) => {
+        //             console.log(`[SUBJECT ${index + 1}] ${singleSubject.subject}: ${singleSubject.marks}`)
+        //         })
+        //     }
+        //     isPass() {
+        //         return this.subjectMarks.every(singleMark => singleMark.marks >= 35)
+        //     }
+
+        //     calculateAvg() {
+        //         let sum = 0
+        //         this.subjectMarks.forEach((singleMark) => {
+        //             sum += singleMark.marks
+        //         })
+        //         console.log(`Average Marks Obtained: ${sum / this.subjectMarks.length}`)
+        //     }
+        // }
+
+        // const Pappu = new Student('Pappu', 'Batch 10', 'MEVN',
+        //     [
+        //         {
+        //             subject: 'Mathematics',
+        //             marks: 86
+        //         },
+        //         {
+        //             subject: 'Science',
+        //             marks: 35
+        //         },
+        //         {
+        //             subject: 'Social Science',
+        //             marks: 65
+        //         },
+        //         {
+        //             subject: 'English',
+        //             marks: 98
+        //         },
+        //         {
+        //             subject: 'Hindi',
+        //             marks: 87
+        //         }
+        //     ])
+        // Pappu.displayInfo()
+        // Pappu.displayMarks()
+        // console.log(Pappu.isPass() ? 'Result: PASS' : 'Result: FAIL')
+        // Pappu.calculateAvg()
+    /* ------------------------------------------------------ */
+
+	class Student {
+            constructor(name, batch, techStack, subjectMarks) {
+                this.name = name
+                this.batch = batch
+                this.techStack = techStack
+                this.subjectMarks = subjectMarks
+            }
+			// Setter Methods (Updating object properties)
+
+			changeTechStack(newTechStack){
+				this.techStack = newTechStack
 			}
 
-			displayInfo(){
-				console.log(`${this.name} from ${this.batch} is currently learning ${this.techStack} stack technology.`)
-			}
+           inputMarks(marksArray){
+			this.subjectMarks = this.subjectMarks.map((singleMarks, index) => 
+			{
+				singleMarks.marks = marksArray[index]
+				return singleMarks
+			})
+           }
+        }
 
-			displayMarks(){
-				this.subjectMarks.forEach((singleSubject, index) => {
-					console.log(`[SUBJECT ${index + 1}] ${singleSubject.subject}: ${singleSubject.marks}`)
-				})
-			}
-
-			isPass () {
-				// return PASS/ NOT PASS
-			}
-
-			calculateAverage() {
-				// return average of all marks
-			}
-		}
-
-		const pankaj = new Student('Pankaj', 'Batch 9', 'MEVN',
-			[
-				{
-					subject: 'Mathematics',
-					marks: 86
-				},
-				{
-					subject: 'Science',
-					marks: 35
-				},
-				{
-					subject: 'Social Science',
-					marks: 65
-				},
-				{
-					subject: 'English',
-					marks: 98
-				},
-				{
-					subject: 'Hindi',
-					marks: 87
-				}
-			])
-
-		pankaj.displayInfo()
-		pankaj.displayMarks()
-		// console.log(pankaj.isPass() ? 'Result: PASS' : 'Result: NOT PASS')
+        const Pappu = new Student('Pappu', 'Batch 10', 'MEVN',
+            [
+                {
+                    subject: 'Mathematics',
+                    marks: 0
+                },
+                {
+                    subject: 'Science',
+                    marks: 0
+                },
+                {
+                    subject: 'Social Science',
+                    marks: 0
+                },
+                {
+                    subject: 'English',
+                    marks: 0
+                },
+                {
+                    subject: 'Hindi',
+                    marks: 0
+                }
+            ])
+			Pappu.changeTechStack('MERN')
+            Pappu.inputMarks([45,35,65,75,85])
+        	console.log(Pappu)
 
 	</script>
 </head>
