@@ -29,9 +29,9 @@ const singleMove = (index) => {
             currentTurnText.innerText = `Player ${winningPlayer} won!`
             return
         }
+        currentPlayerTurn = currentPlayerTurn === 1 ? 2 : 1
+        currentTurnText.innerText = `Player ${currentPlayerTurn}'s turn`
     }
-    currentPlayerTurn = currentPlayerTurn === 1 ? 2 : 1
-    currentTurnText.innerText = `Player ${currentPlayerTurn}'s turn`
 }
 
 const checkWiningStatus = () => {
