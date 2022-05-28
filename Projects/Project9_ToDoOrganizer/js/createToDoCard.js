@@ -1,11 +1,32 @@
-/*************************DOM NODE SELECTION***********************/
-
 const toDoBlock = document.getElementById("toDoBlock");
-const addNewTask = document.getElementById("addNewTask");
-const toDoInput = document.getElementById("toDoInput");
-const selectPriority = document.getElementById("selectPriority");
-const toDoDeadLine = document.getElementById("toDoDeadLine");
+let idCount = 1
 
+/******************DRAG EVENTS*********************/
+/* 
+	Draggable Elements -
+	[draggable = "true"]
+	1. ondragStart
+	2. ondrag
+	Parent Elements (Where you have to drop the draggable element)
+	1. ondragover
+	2. ondrop
+*/
+
+const toDoDragStart = (event) => {
+  let toDoCardIdBeingDragged = event.target.id;
+  event.dataTransfer.setData("ToDoCard", toDoCardIdBeingDragged);
+};
+
+const allowDrop = (event) => {
+  event.preventDefault();
+};
+
+const toDoDrop = (event) => {
+  let toDoCardIdBeingDropped = event.dataTransfer.getData("ToDoCard");
+  let toDoCardBeingDropped = document.getElementById(toDoCardIdBeingDropped);
+  let parentElement = event.target;
+  parentElement.appendChild(toDoCardBeingDropped);
+};
 /**********************CREATE A NEW TO-DO TASK CARD***************/
 
 const createToDoCard = (newToDo, priority, deadline) => {
@@ -21,8 +42,9 @@ const createToDoCard = (newToDo, priority, deadline) => {
   cardHeaderDiv.classList = "card-header";
   cardBodyDiv.classList = "card-body";
   cardTitleH5.classList = "card-title";
-  delButton.classList = "btn btn-danger btn-sm";
-  delButton.id = "deleteToDo";
+  delButton.classList = "btn btn-danger btn-sm delToDo";
+
+  toDoCardDiv.id = `toDoCardId-${idCount}`;
 
   switch (priority) {
     case "High":
@@ -41,6 +63,12 @@ const createToDoCard = (newToDo, priority, deadline) => {
   cardHeaderDeadline.innerText = deadline;
   delButton.innerText = "Delete";
 
+  toDoCardDiv.draggable = "true"
+  toDoCardDiv.addEventListener("dragstart", toDoDragStart)
+  delButton.addEventListener("click", () => {
+    toDoCardDiv.style.display = "none";
+  });
+
   toDoBlock.appendChild(toDoCardDiv);
   toDoCardDiv.appendChild(cardHeaderDiv);
   cardHeaderDiv.appendChild(cardHeaderSpan);
@@ -48,26 +76,8 @@ const createToDoCard = (newToDo, priority, deadline) => {
   toDoCardDiv.appendChild(cardBodyDiv);
   cardBodyDiv.appendChild(cardTitleH5);
   cardBodyDiv.appendChild(delButton);
+
+ 
+  idCount++;
+
 };
-
-/******************ADD NEW TASK TO "To-Do" SECTION*********************/
-
-addNewTask.addEventListener("click", () => {
-  const Datevalue = moment(toDoDeadLine.value).format("YYYY/MM/DD h:mm A");
-  console.log(Datevalue);
-  console.log(newDate)
-  if (
-    !toDoInput.value ||
-    selectPriority.value === "Select Priority" ||
-    !toDoDeadLine.value ||
-    newDate > Datevalue
-  ) {
-    alert("Please Enter a TO-DO, Select Priority and Enter a valid DateTime");
-    return;
-  }
-  createToDoCard(toDoInput.value, selectPriority.value, Datevalue);
-});
-
-/******************CURRENT DATE and TIME*********************/
-
-const newDate = moment(new Date()).format("YYYY/MM/DD h:mm A");
