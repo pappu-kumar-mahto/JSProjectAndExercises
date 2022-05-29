@@ -55,20 +55,52 @@ const validate = (response) => {
   }
 }
 
+const validateAll = () => {
+  validate('toDoInput')
+  validate('selectPriority')
+  validate('toDoDeadLine')
+
+  if (
+    invalidToDoInput.style.display == 'none' &&
+    invalidPriority.style.display == 'none' &&
+    invalidDate.style.display == 'none'
+  ) {
+    return true
+  } else {
+    return false
+  }
+}
+
 /******************ADD NEW TASK TO "To-Do" SECTION*********************/
 
 addNewTask.addEventListener("click", () => {
   const Datevalue = moment(toDoDeadLine.value).format("YYYY/MM/DD h:mm A");
-  createToDoCard(toDoInput.value, selectPriority.value, Datevalue);
-  toDoInput.value = ''
-  selectPriority.value = 'Select Priority'
-  toDoDeadLine.value = ''
-  invalidToDoInput.style.display = 'none'
-  validToDoInput.style.display = 'none'
-  invalidPriority.style.display = 'none'
-  validPriority.style.display = 'none'
-  invalidDate.style.display = 'none'
-  validDate.style.display = 'none'
+  if (validateAll()) {
+    createToDoCard(toDoInput.value, selectPriority.value, Datevalue);
+    toDoInput.value = ''
+    selectPriority.value = 'Select Priority'
+    toDoDeadLine.value = ''
+    
+    validToDoInput.style.display = 'none'
+    
+    validPriority.style.display = 'none'
+    
+    validDate.style.display = 'none'
+  } else {
+    alert('Please Try Again!')
+    toDoInput.value = ''
+    selectPriority.value = 'Select Priority'
+    toDoDeadLine.value = ''
+    
+    invalidToDoInput.style.display = 'none'
+    validToDoInput.style.display = 'none'
+    
+    invalidPriority.style.display = 'none'
+    validPriority.style.display = 'none'
+    
+    validDate.style.display = 'none'
+    invalidDate.style.display = 'none'
+  }
 });
 
 
