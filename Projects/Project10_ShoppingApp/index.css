@@ -1,3 +1,71 @@
+body{
+    background: linear-gradient(90deg, rgba(31,110,114,1) 23%, rgba(13,163,188,1) 100%);
+}
+
 .mainHeaderSection{
     text-align: center;
+    background-color: #65b1b9;
 }
+
+.jumbotron-img{
+    margin: 0 0 20px;
+    height: 250px;
+    border-radius:100%;
+    border: 1px solid #0493a4;
+}
+
+.my-4{
+    width: 25%;
+}
+
+.btn-primary{
+    background: linear-gradient(90deg, rgba(31,110,114,1) 23%, rgba(13,163,188,1) 100%);
+}
+
+.navbar{
+    background-color: #65b1b9;
+}
+
+.btn{
+    border:none
+}
+.btn:active {
+	box-shadow: none;
+}
+.btn:focus {
+	box-shadow: none;
+}
+
+.navbar-brand img{
+    border-radius: 10px;
+    margin-right: 2px;
+}
+
+.card.product .product-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card.product{
+    margin: 10px 0;
+}
+
+.card.product .card-img-top{
+    height: 250px;
+}
+.card.product .btn-outer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.card.product .btn-outer .buy-btn{
+    width: 100px;
+}
+
+.card-title.product-price{
+    color:#64c4d4;
+}
+
+.fa-star.checked {
+    color: orange;
+  }
