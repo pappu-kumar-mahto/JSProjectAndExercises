@@ -8,10 +8,7 @@ body{
 }
 
 .jumbotron-img{
-    margin: 0 0 20px;
-    height: 250px;
-    border-radius:100%;
-    border: 1px solid #0493a4;
+    height: 300px; 
 }
 
 .my-4{
@@ -44,6 +41,7 @@ body{
 .card.product .product-header{
     display: flex;
     justify-content: space-between;
+    height: 39px;
 }
 
 .card.product{
@@ -68,4 +66,8 @@ body{
 
 .fa-star.checked {
     color: orange;
-  }
+}
+
+.card-text{
+    height: 72px;
+}

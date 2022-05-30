@@ -1,13 +1,13 @@
-const parentDiv = document.getElementById('products')
+const parentProductDiv = document.getElementById('products')
 
-const createProductDiv = () => {
+const createProductDiv = (product) => {
     const colDiv = document.createElement('div')
     const productDiv = document.createElement('div')
     const productImg = document.createElement('img')
     const productBody = document.createElement('div')
     const productHeader = document.createElement('div')
-    const productTitle = document.createElement('h5')
-    const productPrice = document.createElement('h4')
+    const productTitle = document.createElement('h6')
+    const productPrice = document.createElement('h5')
     const productDescription = document.createElement('p')
     const productRating1 = document.createElement('span')
     const productRating2 = document.createElement('span')
@@ -31,13 +31,25 @@ const createProductDiv = () => {
     productRating2.classList = 'fa fa-star checked'
     productRating3.classList = 'fa fa-star checked'
     productRating4.classList = 'fa fa-star checked'
-    productRating5.classList = 'fa fa-star'
+    productRating5.classList = 'fa fa-star checked'
     productRatingCount.classList = 'rating-count'
     cardButtonOuter.classList = 'btn-outer'
     addToCartButton.classList = 'btn btn-primary'
     buyButton.classList = 'btn btn-primary'
 
-    parentDiv.appendChild(colDiv)
+    colDiv.id = `product-${product.id}`
+
+    productImg.src = product.image
+    productImg.alt = 'product-img'
+
+    productTitle.innerText = `${product.title.slice(0, 15)}...`
+    productPrice.innerText = `$${product.price}`
+    productDescription.innerText = `${product.description.slice(0, 45)}...`
+    productRatingCount.innerText = `(${product.rating.count})`
+    addToCartButton.innerText = 'Add To Cart'
+    buyButton.innerText = 'Buy Now'
+
+    parentProductDiv.appendChild(colDiv)
     colDiv.appendChild(productDiv)
     productDiv.appendChild(productImg)
     productDiv.appendChild(productBody)
