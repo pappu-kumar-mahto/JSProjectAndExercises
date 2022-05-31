@@ -1,10 +1,22 @@
 body{
     background: linear-gradient(90deg, rgba(31,110,114,1) 23%, rgba(13,163,188,1) 100%);
 }
-
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 .mainHeaderSection{
     text-align: center;
     background-color: #65b1b9;
+}
+
+.brand-name{
+    color: #ffffff;
+    background: linear-gradient(90deg, rgba(31,110,114,1) 23%, rgba(13,163,188,1) 100%);
+    border-radius: 60px;
+    padding: 4px 20px;
 }
 
 .jumbotron-img{
@@ -38,6 +50,14 @@ body{
     margin-right: 2px;
 }
 
+#products{
+    padding-top: 60px;
+}
+
+#products-spinner{
+    margin: 50px auto;
+}
+
 .card.product .product-header{
     display: flex;
     justify-content: space-between;
@@ -62,6 +82,7 @@ body{
 
 .card-title.product-price{
     color:#64c4d4;
+    margin-left: 4px;
 }
 
 .fa-star.checked {
