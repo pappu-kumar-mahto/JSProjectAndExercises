@@ -85,10 +85,19 @@ body{
     margin-left: 4px;
 }
 
-.fa-star.checked {
+.fa-star.checked, .fa-star-half-full {
     color: orange;
 }
 
 .card-text{
     height: 72px;
+}
+
+.rating-count{
+    margin-left: 5px;
+}
+
+.add-to-cart-btn, .buy-btn{
+    flex: 1;
+    margin: 0 0 0 5px;
 }
