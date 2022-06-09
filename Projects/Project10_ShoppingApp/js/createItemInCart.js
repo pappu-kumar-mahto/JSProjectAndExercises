@@ -45,6 +45,10 @@ const createCartItem = (cartItem) => {
     productHeader.appendChild(productPrice);
     productBody.appendChild(cardButtonOuter);
     cardButtonOuter.appendChild(removeFromCartBtn); 
+
+    removeFromCartBtn.addEventListener('click', () => {
+        productDiv.style.display = "none"
+    })
 }
 
 {/* <div class="row">
