@@ -50,6 +50,14 @@ body{
     justify-content: space-between;
 }
 
+#cartItemBody{
+    text-align: center;
+}
+
+#empty-cart-img{
+    height: 300px;
+}
+
 .btn{
     border:none
 }
