@@ -45,9 +45,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contactUs">Contact Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id = "cart-Item">
-                        Cart 
+                <li class="nav-item cart-nav-link">
+                    <a class="nav-link"data-toggle="modal" data-target="#cartModal"> 
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;
                         <span class="badge badge-pill badge-light" id = "cart-item-length">0</span>
                     </a>
@@ -275,11 +274,34 @@
         <!------------------------------------------------------------------------------------------------------------------------------------------>
 
     </div>
+        <!------------------------------------------------------------Modal For Cart---------------------------------------------------------------------->
+
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cart Items</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="cartItemBody">
+                </div>
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Continue to Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
     <script src="js/createProduct.js"></script>
     <script src="js/misc.js"></script>
     <script src="js/addToCart.js"></script>
     <script src = "js/signUpandLogIn.js"></script>
-    <script src="js/index.js"></script>
+    <script src = "js/createItemInCart.js"></script>
 </body>
 
 </html>

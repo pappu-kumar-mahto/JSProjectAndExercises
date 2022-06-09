@@ -35,6 +35,21 @@ body{
     background-color: #65b1b9;
 }
 
+.cart-nav-link:hover{
+    cursor: pointer;
+}
+
+.cart-item-img{
+    padding: 25px;
+}
+
+.cart-body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .btn{
     border:none
 }
