@@ -49,22 +49,14 @@ const createCartItem = (cartItem) => {
     cardButtonOuter.appendChild(removeFromCartBtn); 
 
     removeFromCartBtn.addEventListener('click', () => {
-        productDiv.style.display = "none"
+        const removedCartItem = document.getElementById(`add-to-cart-${cartItemIds.filter(cartItemId => cartItemId == cartItem.id)[0]}`)
+        removedCartItem.innerHTML =
+        '<i class="fa fa-cart-plus" aria-hidden="true"></i>';
+        cartItemBody.removeChild(productDiv)
+        cartItemIds = cartItemIds.filter(cartItemId => cartItemId != cartItem.id)
+        cartItemLength.innerText = cartItemIds.length
+        if (cartItemIds.length==0) {
+            emptyCartImg.style.display = 'inline-block'
+        }
     })
 }
-
-{/* <div class="row">
-    <div class="col-md-6">
-    <img class="card-img-top" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-        alt="product-img">
-    </div>
-    <div class="col-md-6">
-        <div class="card-body">
-        <div class="product-header">
-            <h6 class="card-title">Fjallraven - Foldsac...</h6>
-            <h5 class="card-title product-price">$109.95</h5>
-        </div>
-        <div class="btn-outer"><a class="btn btn-primary buy-btn">Buy now</a></div>
-        </div>
-    </div>
-</div>  */}
