@@ -85,5 +85,7 @@ const createProductDiv = (product) => {
     addToCart(product.id);
     addToCartButton.innerHTML =
       '<i class="fa fa-check-square-o" aria-hidden="true"></i>';
+    
+    this.classList.add("disabled");
   });
 };

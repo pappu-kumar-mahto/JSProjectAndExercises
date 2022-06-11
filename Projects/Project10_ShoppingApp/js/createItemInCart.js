@@ -58,5 +58,6 @@ const createCartItem = (cartItem) => {
         if (cartItemIds.length==0) {
             emptyCartImg.style.display = 'inline-block'
         }
+        removedCartItem.classList.remove("disabled")
     })
 }
