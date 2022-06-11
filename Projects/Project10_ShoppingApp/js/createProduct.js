@@ -40,7 +40,6 @@ const createProductDiv = (product) => {
   buyButton.classList = "btn btn-primary buy-btn";
 
   colDiv.id = `product-${product.id}`;
-  addToCartButton.id = `add-to-cart-${product.id}`;
 
   productImg.src = product.image;
   productImg.alt = "product-img";

@@ -49,7 +49,7 @@ const createCartItem = (cartItem) => {
     cardButtonOuter.appendChild(removeFromCartBtn); 
 
     removeFromCartBtn.addEventListener('click', () => {
-        const removedCartItem = document.getElementById(`add-to-cart-${cartItemIds.filter(cartItemId => cartItemId == cartItem.id)[0]}`)
+        const removedCartItem = document.getElementById(`product-${cartItem.id}`).getElementsByClassName('add-to-cart-btn')[0]
         removedCartItem.innerHTML =
         '<i class="fa fa-cart-plus" aria-hidden="true"></i>';
         cartItemBody.removeChild(productDiv)
