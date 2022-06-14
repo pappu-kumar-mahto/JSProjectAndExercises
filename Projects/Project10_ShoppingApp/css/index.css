@@ -35,8 +35,8 @@ body{
     background-color: #65b1b9;
 }
 
-.cart-nav-link:hover{
-    cursor: pointer;
+.nav-item:hover {
+	cursor: pointer;
 }
 
 .cart-item-img{
