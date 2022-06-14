@@ -5,10 +5,7 @@ let emailStoredInDB = ""
 
 let singnUpPass = document.getElementById("signUpPassword");
 
-let passMeterBar = document.getElementById("passMeterBar")
-let passMeterLebel = document.getElementById("passMeterLebel")
-let passLebel = document.getElementById("passLebel")
-let passMeterBarInner = document.getElementById("passMeterBarInner")
+let signUpForm = document.getElementById('signupForm')
 
 let logInPass = document.getElementById("logInPassword");
 let logInMatch = document.getElementById("logInMatch");

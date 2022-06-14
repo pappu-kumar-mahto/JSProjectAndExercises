@@ -155,7 +155,7 @@
                 <div class="modal-body" id="cart-item-body">
                     <form novalidate id="signupForm">
                         <div class="form-row">
-                            <div class="col-md-6 mb-3 form-field">
+                            <div class="col-md-6 mb-3 form-fields">
                                 <label for="firstName" class="form-label">First name</label>
                                 <input type="text" class="form-control" id="firstName" required onkeyup="validate('firstName')">
                                 <div class="valid-feedback" id="firstNameValid">
@@ -165,7 +165,7 @@
                                     Please provide a valid FirstName.
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3 form-field">
+                            <div class="col-md-6 mb-3 form-fields">
                                 <label for="lastName" class="form-label">Last name</label>
                                 <input type="text" class="form-control" id="lastName" required onkeyup="validate('lastName')">
                                 <div class="valid-feedback" id="lastNameValid">
@@ -175,39 +175,38 @@
                                     Please provide a valid LastName.
                                 </div>
                             </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-12 mb-3 form-fields">
-                            <label for="email" class="form-label">Email</label>
-                            <div class="input-group has-validation">
-                                <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend"
-                                    onblur="emailInput()" required onkeyup="validate('email')">
-                                <div class="valid-feedback" id="emailValid">
-                                    Looks good!
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3 form-fields">
+                                <label for="email" class="form-label">Email</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend"
+                                        onblur="emailInput()" required onkeyup="validate('email')">
+                                    <div class="valid-feedback" id="emailValid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="emailInvalid">
+                                        Please Enter a valid Email.
+                                    </div>
                                 </div>
-                                <div class="invalid-feedback" id="emailInvalid">
-                                    Please choose an Email.
+                            </div>
+                            <div class="col-md-12 mb-3 form-fields">
+                                <div id="signup">
+                                    <label for="signUpPassword">Password</label>
+                                    <input type="password" class="form-control" id="signUpPassword" onkeyup="validate('singnUpPass')"
+                                        onblur="savePassword()">
+                                </div>
+                        
+                                <div class="valid-feedback" id="rightSignUpPass">
+                                    Looks Good!
+                                </div>
+                        
+                                <div class="invalid-feedback" id="wrongSignUpPass">
+                                    please Enter a valid password!!(min 8 characters including AlphaNumeric and symbols)
                                 </div>
                             </div>
                         </div>
-                        <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
-                        <div class="col-md-12 mb-3 form-fields" id="password">
-                            <div id="signup">
-                                <label for="signUpPassword">Password</label>
-                                <input type="password" class="form-control" id="signUpPassword" onkeyup="validate('singnUpPass')"
-                                    onblur="savePassword()">
-                            </div>
-                    
-                            <div class="valid-feedback" id="rightSignUpPass">
-                                Looks Good!
-                            </div>
-                    
-                            <div class="invalid-feedback" id="wrongSignUpPass">
-                                please Enter a valid password!!
-                            </div>
-                        </div>
-                    </div>
                     </form>
             </div>
     
