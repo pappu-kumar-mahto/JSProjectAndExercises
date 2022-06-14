@@ -20,7 +20,7 @@ let passwordValid = passwordField.getElementsByClassName('valid-feedback')[0]
 let passwordInvalid = passwordField.getElementsByClassName('invalid-feedback')[0]
 
 const validate = (flag = false) => {
-    if (!globalFlag)
+    if (flag)
         globalFlag = flag
 
     if (globalFlag) {
