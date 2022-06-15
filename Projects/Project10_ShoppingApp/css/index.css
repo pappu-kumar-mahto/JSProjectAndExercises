@@ -127,3 +127,9 @@ body{
 #cart-item-body{
     text-align: center;
 }
+
+#notification-alert{
+    position: absolute;
+    right: 10px;
+    display: none;
+}

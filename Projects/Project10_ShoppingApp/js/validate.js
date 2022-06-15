@@ -141,8 +141,8 @@ const reset = () => {
 }
 
 const resetLogin = () => {
-    emailField.getElementsByClassName('form-control')[0].value = ""
-    passwordField.getElementsByClassName('form-control')[0].value = ""
+    loginEmailField.getElementsByClassName('form-control')[0].value = ""
+    loginPasswordField.getElementsByClassName('form-control')[0].value = ""
 
 	loginEmailValid.style.display = 'none'
 	loginEmailInvalid.style.display = 'none'
