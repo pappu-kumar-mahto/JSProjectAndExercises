@@ -81,6 +81,21 @@ body{
     margin: 50px auto;
 }
 
+#aboutUs{
+   background-color: #65b1b9;
+   text-align: center;
+   padding: 50px 20px; 
+   margin: 40px 0;
+   border-radius: 10px;
+}
+#contactUs{
+    background-color: #65b1b9;
+   text-align: center;
+   padding: 50px 20px; 
+   margin: 20px 0;
+   border-radius: 10px;
+}
+
 .card.product .product-header{
     display: flex;
     justify-content: space-between;
