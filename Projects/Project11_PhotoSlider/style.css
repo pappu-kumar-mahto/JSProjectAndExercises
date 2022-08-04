@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Hurricane&family=Ramaraja&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'open-sans', sans-serif;
+    height: 100vh;
+}
+
+.slider-container{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.left-slide{
+    width: 35%;
+    height: 100%;
+}
+
+.left-slide > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f8f8f8;
+}
+
+.left-slide h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.right-slide{
+    width: 65%;
+    height: 100%;
+}
+
+.right-slide > div{
+    height: 100%;
+    width: 100%;
+}
+
+#eagle-img{
+    background: url("./assets/eagle.jpeg");
+}
+#castle-img{
+    background: url("./assets/castle.jpeg");
+}
+#sky-img{
+    background: url("./assets/mountains.jpeg");
+}
+#nature-img{
+    background: url("./assets/flower.jpeg");
+}
+
+.action-btn >button {
+    background-color: #f8f8f8;
+    cursor: pointer;
+    color: #aaaaaa;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.slider-container .action-btn button{
+    position: absolute;
+    left: 35%;
+    top: 50%;
+}
+.slider-container .action-btn .down-btn{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transform: translateX(-100%);
+}
+
+.slider-container .action-btn .up-btn{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: translateY(-100%);
+}
+
